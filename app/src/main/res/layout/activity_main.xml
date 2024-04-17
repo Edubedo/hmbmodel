@@ -10,12 +10,11 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/splashapp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.112" />
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="106dp"
+        android:layout_marginTop="50dp"
+        android:text="Inicio de Sesión"
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/btnsalir"
@@ -28,4 +27,37 @@
         android:text="@string/salir"
         android:textSize="20sp" />
 
+    <EditText
+        android:id="@+id/editTextUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="183dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Usuario" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="275dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Contraseña" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="325dp"
+        android:text="Iniciar Sesión" />
 </RelativeLayout>
