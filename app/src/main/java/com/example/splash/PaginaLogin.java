@@ -21,19 +21,16 @@ public class PaginaLogin extends AppCompatActivity {
 
         btnLogout = findViewById(R.id.btnLogout);
 
-        // Obtener SharedPreferences
         sharedPreferences = getSharedPreferences("login", Context.MODE_PRIVATE);
 
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Eliminar las credenciales almacenadas
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.remove("username");
                 editor.remove("password");
                 editor.apply();
 
-                // Redirigir a la actividad MainActivity
                 Intent intent = new Intent(PaginaLogin.this, MainActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);

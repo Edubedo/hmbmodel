@@ -33,12 +33,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="183dp"
+        android:layout_marginStart="122dp"
+        android:layout_marginTop="148dp"
         android:ems="10"
         android:inputType="text"
         android:minHeight="48dp"
-        android:text="Usuario" />
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
         android:id="@+id/editTextPassword"
@@ -46,14 +46,13 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="57dp"
-        android:layout_marginTop="275dp"
+        android:layout_marginStart="117dp"
+        android:layout_marginTop="240dp"
         android:autofillHints=""
         android:ems="10"
         android:inputType="text"
         android:minHeight="48dp"
-        android:text="Contraseña"
-        tools:ignore="TextFields" />
+        tools:ignore="TextFields,SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/btnLogin"
@@ -64,4 +63,24 @@
         android:layout_marginEnd="0dp"
         android:layout_marginBottom="325dp"
         android:text="Iniciar Sesión" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="165dp"
+        android:text="Usuario:" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="258dp"
+        android:text="Contraseña:" />
 </RelativeLayout>
