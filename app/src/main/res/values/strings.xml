@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">splash</string>
+    <string name="salir">Salir</string>
+    <string name="splashapp">SplashApp</string>
+</resources>
