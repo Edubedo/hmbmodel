@@ -37,6 +37,7 @@
         android:layout_marginTop="183dp"
         android:ems="10"
         android:inputType="text"
+        android:minHeight="48dp"
         android:text="Usuario" />
 
     <EditText
@@ -47,9 +48,12 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="57dp"
         android:layout_marginTop="275dp"
+        android:autofillHints=""
         android:ems="10"
         android:inputType="text"
-        android:text="Contraseña" />
+        android:minHeight="48dp"
+        android:text="Contraseña"
+        tools:ignore="TextFields" />
 
     <Button
         android:id="@+id/btnLogin"
