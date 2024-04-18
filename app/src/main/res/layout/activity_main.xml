@@ -4,16 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#011120"
     tools:context=".MainActivity"
     tools:ignore="ExtraText">
 
-    <TextView 
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_marginStart="106dp"
         android:layout_marginTop="50dp"
         android:text="Inicio de Sesión"
+        android:textColor="#FAF5E1"
         android:textSize="24sp" />
 
     <Button
@@ -47,7 +49,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="117dp"
-        android:layout_marginTop="240dp"
+        android:layout_marginTop="239dp"
         android:autofillHints=""
         android:ems="10"
         android:inputType="text"
@@ -72,7 +74,8 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="29dp"
         android:layout_marginTop="165dp"
-        android:text="Usuario:" />
+        android:text="Usuario:"
+        android:textColor="#FAF5E1" />
 
     <TextView
         android:id="@+id/textView4"
@@ -82,5 +85,6 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="23dp"
         android:layout_marginTop="258dp"
-        android:text="Contraseña:" />
+        android:text="Contraseña:"
+        android:textColor="#FAF5E1" />
 </RelativeLayout>
