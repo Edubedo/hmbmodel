@@ -9,34 +9,30 @@
     tools:ignore="ExtraText">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="106dp"
-        android:layout_marginTop="50dp"
-        android:text="Inicio de Sesión"
-        android:textColor="#FAF5E1"
-        android:textSize="24sp" />
-
-    <Button
-        android:id="@+id/btnsalir"
-        android:layout_width="245dp"
-        android:layout_height="195dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="4dp"
-        android:layout_marginBottom="0dp"
-        android:text="@string/salir"
-        android:textSize="20sp" />
-
-    <EditText
-        android:id="@+id/editTextUsername"
+        android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="122dp"
-        android:layout_marginTop="148dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="289dp"
+        android:fontFamily="sans-serif-black"
+        android:freezesText="false"
+        android:text="Iniciar Sesión"
+        android:textColor="#FAF5E1"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/editTextUsername"
+        android:layout_width="341dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="410dp"
+        android:layout_marginEnd="35dp"
+        android:background="@color/white"
         android:ems="10"
         android:inputType="text"
         android:minHeight="48dp"
@@ -44,13 +40,16 @@
 
     <EditText
         android:id="@+id/editTextPassword"
-        android:layout_width="wrap_content"
+        android:layout_width="340dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="117dp"
-        android:layout_marginTop="239dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="507dp"
+        android:layout_marginEnd="35dp"
         android:autofillHints=""
+        android:background="#FFFFFF"
         android:ems="10"
         android:inputType="text"
         android:minHeight="48dp"
@@ -58,12 +57,13 @@
 
     <Button
         android:id="@+id/btnLogin"
-        android:layout_width="match_parent"
+        android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="325dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="43dp"
+        android:fontFamily="sans-serif-condensed"
         android:text="Iniciar Sesión" />
 
     <TextView
@@ -72,8 +72,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="165dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="383dp"
+        android:fontFamily="sans-serif-condensed"
         android:text="Usuario:"
         android:textColor="#FAF5E1" />
 
@@ -83,8 +84,62 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="23dp"
-        android:layout_marginTop="258dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="481dp"
+        android:fontFamily="sans-serif-condensed"
         android:text="Contraseña:"
         android:textColor="#FAF5E1" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="348dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="336dp"
+        android:rotation="180"
+        app:srcCompat="@drawable/olasbg" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="-132dp"
+        android:layout_marginBottom="-88dp"
+        android:rotation="20"
+        android:rotationY="180"
+        app:tint="#252549"
+        app:srcCompat="@drawable/olasbg" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="381dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-189dp"
+        android:layout_marginEnd="-29dp"
+        app:srcCompat="@drawable/olasbg" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="310dp"
+        android:layout_marginBottom="58dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Registrarse"
+        android:textColor="#254581" />
+
+    a
+
 </RelativeLayout>
