@@ -5,59 +5,77 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/usuario"
     tools:context=".PaginaLogin">
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="209dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="31dp"
-        android:layout_marginTop="17dp"
-        android:layout_marginBottom="7dp"
+        android:layout_width="212dp"
+        android:layout_height="49dp"
         android:text="Bienvenid@"
+        android:textColor="@color/white"
         android:textSize="26sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteX="108dp"
+        tools:layout_editor_absoluteY="151dp" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="34dp"
-        android:layout_marginEnd="34dp"
-        android:layout_marginBottom="40dp"
+        android:layout_width="350dp"
+        android:layout_height="190dp"
         android:text="BIENVENIDO A HMB MODEL LOB@, AUUUUUUUUU!!!!! Aqui te pondremos mamad@ en poco tiempo y seras capaz de atraer a tod@s l@s lob@s que quieras, inicia sesion para desarrollar esos musculos AUUUUUUUUUUUUUU"
+        android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="210dp" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="74dp"
-        android:layout_marginEnd="74dp"
-        android:layout_marginBottom="161dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnLogout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        tools:srcCompat="@tools:sample/avatars"/>
+        android:layout_width="265dp"
+        android:layout_height="170dp"
+        tools:layout_editor_absoluteX="73dp"
+        tools:layout_editor_absoluteY="400dp"
+        tools:srcCompat="@drawable/lobo" />
 
     <Button
         android:id="@+id/btnLogout"
+        android:layout_width="133dp"
+        android:layout_height="59dp"
+        android:background="@drawable/boton_salir"
+        android:text="Cerrar Sesión"
+        android:textColor="@color/white"
+        tools:layout_editor_absoluteX="139dp"
+        tools:layout_editor_absoluteY="610dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="78dp"
-        android:text="Cerrar Sesión"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        android:elevation="-2dp"
+        android:rotation="-180"
+        app:srcCompat="@drawable/olasbg"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-72dp" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="626dp"
+        android:layout_height="251dp"
+        android:elevation="-3dp"
+        android:rotation="-19"
+        app:srcCompat="@drawable/olasbg"
+        app:tint="#252549"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="506dp" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="590dp"
+        android:layout_height="0dp"
+        android:elevation="-3dp"
+        android:rotation="23"
+        app:srcCompat="@drawable/olasbg"
+        app:tint="#252549"
+        tools:layout_editor_absoluteX="-252dp"
+        tools:layout_editor_absoluteY="439dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
