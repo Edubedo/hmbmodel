@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#011120"
-    tools:context=".MainActivity"
+    tools:context=".login_administrador"
     tools:ignore="ExtraText">
 
     <ImageView
@@ -50,7 +50,7 @@
         android:layout_marginTop="139dp"
         android:fontFamily="sans-serif-black"
         android:freezesText="false"
-        android:text="Iniciar Sesión"
+        android:text="Administrador"
         android:textColor="#FAF5E1"
         android:textSize="48sp" />
 
@@ -120,5 +120,13 @@
         app:srcCompat="@drawable/olasbg"
         app:tint="#252549" />
 
-
+    <Button
+        android:id="@+id/btnAtras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="684dp"
+        android:text="Atrás" />
 </RelativeLayout>
