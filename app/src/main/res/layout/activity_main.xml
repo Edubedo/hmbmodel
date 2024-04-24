@@ -4,24 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#011120"
+    android:background="@drawable/background"
     tools:context=".MainActivity"
     tools:ignore="ExtraText">
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="407dp"
-        android:layout_height="411dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="-123dp"
-        android:layout_marginEnd="-1dp"
-        android:layout_marginBottom="442dp"
-        android:rotation="180"
-        app:srcCompat="@drawable/olasbg" />
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@drawable/blackgradient" />
 
     <EditText
         android:id="@+id/editTextPassword"
@@ -30,29 +21,18 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="374dp"
-        android:layout_marginEnd="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="496dp"
+        android:layout_marginEnd="34dp"
         android:autofillHints=""
-        android:background="#FFFFFF"
+        android:background="@drawable/edittextstyle"
         android:ems="10"
+        android:fontFamily="sans-serif-condensed"
+        android:hint="Contraseña"
         android:inputType="text"
         android:minHeight="48dp"
+        android:textColorHint="#85FFFFFF"
         tools:ignore="TextFields,SpeakableTextPresentCheck" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="41dp"
-        android:layout_marginTop="139dp"
-        android:fontFamily="sans-serif-black"
-        android:freezesText="false"
-        android:text="Iniciar Sesión"
-        android:textColor="#FAF5E1"
-        android:textSize="48sp" />
 
     <EditText
         android:id="@+id/editTextUsername"
@@ -61,14 +41,33 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="38dp"
-        android:layout_marginTop="249dp"
-        android:layout_marginEnd="31dp"
-        android:background="@color/white"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="412dp"
+        android:layout_marginEnd="34dp"
+        android:background="@drawable/edittextstyle"
         android:ems="10"
+        android:fontFamily="sans-serif-condensed"
+        android:hint="Usuario"
         android:inputType="text"
         android:minHeight="48dp"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#85FFFFFF"
         tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="31dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="85dp"
+        android:background="@drawable/boton_salir"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Iniciar Sesión"
+        android:textColor="@android:color/white" />
 
     <TextView
         android:id="@+id/textView3"
@@ -76,49 +75,29 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="38dp"
-        android:layout_marginTop="222dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="169dp"
         android:fontFamily="sans-serif-condensed"
-        android:text="Usuario:"
-        android:textColor="#FAF5E1" />
+        android:shadowColor="#00FFFFFF"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#00FF0000"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        tools:text="Chupame el Pene" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="344dp"
-        android:fontFamily="sans-serif-condensed"
-        android:text="Contraseña:"
-        android:textColor="#FAF5E1" />
-
-    <Button
-        android:id="@+id/btnLogin"
-        android:layout_width="150dp"
-        android:layout_height="59dp"
-        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="126dp"
-        android:layout_marginEnd="135dp"
-        android:layout_marginBottom="207dp"
-        android:fontFamily="sans-serif-condensed"
-        android:text="Iniciar Sesión" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="wrap_content"
-        android:layout_height="156dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="-229dp"
-        android:layout_marginBottom="-32dp"
-        android:rotation="20"
-        android:rotationY="180"
-        app:srcCompat="@drawable/olasbg"
-        app:tint="#252549" />
+        android:layout_marginEnd="162dp"
+        android:layout_marginBottom="465dp"
+        android:fontFamily="casual"
+        android:text="Por favor."
+        android:textColor="#FFEB3B"
+        android:textSize="24sp" />
 
     a
 
