@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <!-- Background color of the view -->
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+    <item android:top="40dp">
+        <!-- Line at the bottom -->
+        <shape android:shape="line">
+            <stroke
+                android:width="1dp"
+                android:color="@android:color/white" /> <!-- Change the color as needed -->
+        </shape>
+    </item>
+</layer-list>
