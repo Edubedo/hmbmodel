@@ -76,7 +76,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="169dp"
+        android:layout_marginTop="187dp"
         android:fontFamily="sans-serif-condensed"
         android:shadowColor="#00FFFFFF"
         android:text="TextView"
@@ -85,19 +85,6 @@
         android:textSize="48sp"
         android:textStyle="bold"
         tools:text="Chupame el Pene" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="162dp"
-        android:layout_marginBottom="465dp"
-        android:fontFamily="casual"
-        android:text="Por favor."
-        android:textColor="#FFEB3B"
-        android:textSize="24sp" />
 
 
 </RelativeLayout>
