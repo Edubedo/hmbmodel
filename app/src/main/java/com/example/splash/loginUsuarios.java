@@ -29,7 +29,7 @@ public class loginUsuarios extends AppCompatActivity {
         sharedPreferences = getSharedPreferences("login", Context.MODE_PRIVATE);
 
         if (sharedPreferences.contains("username") && sharedPreferences.contains("password")) {
-            startActivity(new Intent(loginUsuarios.this, pantallaInicio.class));
+            startActivity(new Intent(loginUsuarios.this, homeUsuario.class));
             finish();
         }
 
