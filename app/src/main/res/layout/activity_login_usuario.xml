@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".MainActivity"
+    tools:context=".loginUsuarios"
     tools:ignore="ExtraText">
 
     <ImageView
@@ -84,7 +84,7 @@
         android:textColorHighlight="#00FF0000"
         android:textSize="48sp"
         android:textStyle="bold"
-        tools:text="Bienv" />
+        tools:text="Bienvenido" />
 
 
 </RelativeLayout>

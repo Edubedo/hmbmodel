@@ -18,19 +18,19 @@
             android:name=".registroUsuarios"
             android:exported="false" />
         <activity
-            android:name=".inicio_administrador"
+            android:name=".pantallaInicioAdministrador"
             android:exported="false" />
         <activity
             android:name=".login_administrador"
             android:exported="false" />
         <activity
-            android:name=".elegir_tipo_usuario"
+            android:name=".elegirTipoUsuario"
             android:exported="false" />
         <activity
-            android:name=".paginaLogin"
+            android:name=".pantallaInicio"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".loginUsuarios"
             android:exported="false" />
         <activity
             android:name=".splash"

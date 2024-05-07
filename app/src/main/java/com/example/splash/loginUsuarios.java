@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class loginUsuarios extends AppCompatActivity {
 
     private EditText editTextUsername, editTextPassword;
     private Button btnLogin;
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         sharedPreferences = getSharedPreferences("login", Context.MODE_PRIVATE);
 
         if (sharedPreferences.contains("username") && sharedPreferences.contains("password")) {
-            startActivity(new Intent(MainActivity.this, paginaLogin.class));
+            startActivity(new Intent(loginUsuarios.this, pantallaInicio.class));
             finish();
         }
 
@@ -45,10 +45,10 @@ public class MainActivity extends AppCompatActivity {
                     editor.putString("password", password);
                     editor.apply();
 
-                    startActivity(new Intent(MainActivity.this, paginaLogin.class));
+                    startActivity(new Intent(loginUsuarios.this, pantallaInicio.class));
                     finish();
                 } else {
-                    Toast.makeText(MainActivity.this, "Credenciales incorrectas", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(loginUsuarios.this, "Credenciales incorrectas", Toast.LENGTH_SHORT).show();
                 }
             }
         });
