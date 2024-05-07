@@ -84,7 +84,7 @@
         android:textColorHighlight="#00FF0000"
         android:textSize="48sp"
         android:textStyle="bold"
-        tools:text="Chupame el Pene" />
+        tools:text="Bienv" />
 
 
 </RelativeLayout>

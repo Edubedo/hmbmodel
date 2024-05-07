@@ -10,7 +10,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class PaginaLogin extends AppCompatActivity {
+public class paginaLogin extends AppCompatActivity {
 
     private Button btnLogout;
     private SharedPreferences sharedPreferences;
@@ -19,7 +19,7 @@ public class PaginaLogin extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pagina_login);
+        setContentView(R.layout.activity_pantalla_inicio_usuario);
 
         btnLogout = findViewById(R.id.btnLogout);
 
@@ -33,7 +33,7 @@ public class PaginaLogin extends AppCompatActivity {
                 editor.remove("password");
                 editor.apply();
 
-                Intent intent = new Intent(PaginaLogin.this, MainActivity.class);
+                Intent intent = new Intent(paginaLogin.this, MainActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
             }

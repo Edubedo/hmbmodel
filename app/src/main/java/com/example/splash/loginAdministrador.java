@@ -39,7 +39,7 @@ public class loginAdministrador extends AppCompatActivity {
         sharedPreferences = getSharedPreferences("login", Context.MODE_PRIVATE);
 
         if (sharedPreferences.contains("username") && sharedPreferences.contains("password")) {
-            startActivity(new Intent(loginAdministrador.this, PaginaLogin.class));
+            startActivity(new Intent(loginAdministrador.this, paginaLogin.class));
             finish();
         }
 
@@ -55,7 +55,7 @@ public class loginAdministrador extends AppCompatActivity {
                     editor.putString("password", password);
                     editor.apply();
 
-                    startActivity(new Intent(loginAdministrador.this, PaginaLogin.class));
+                    startActivity(new Intent(loginAdministrador.this, paginaLogin.class));
                     finish();
                 } else {
                     Toast.makeText(loginAdministrador.this, "Credenciales incorrectas", Toast.LENGTH_SHORT).show();
