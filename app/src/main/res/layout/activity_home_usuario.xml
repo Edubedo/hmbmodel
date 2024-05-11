@@ -1,30 +1,49 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#FFFFFF"
-    android:backgroundTint="#FFFFFF"
-    tools:context=".homeUsuario">
+    <?xml version="1.0" encoding="utf-8"?>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:backgroundTint="#FFFFFF"
+        tools:context=".homeUsuario">
 
-    <!-- Contenedor principal -->
+        <!-- Contenedor principal -->
 
-    <!-- Barra de navegación -->
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        android:layout_width="412dp"
-        android:layout_height="45dp"
-        android:layout_alignParentBottom="true"
-        android:background="#020202"
-        android:foregroundTint="#FFF"
-        app:itemIconTint="@android:color/white"
-        app:itemTextColor="#FFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_nav_menu"
-        tools:ignore="MissingConstraints" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- Barra de navegación -->
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="412dp"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:background="#020202"
+            android:foregroundTint="#FFF"
+            app:itemIconTint="@android:color/white"
+            app:itemTextColor="#FFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.333"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/bottom_nav_menu"
+            tools:ignore="MissingConstraints" />
+
+        <FrameLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/fondo1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/fondousuario"/>
+
+            <ImageView
+                android:id="@+id/fondo2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/fondousuario"/>
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
