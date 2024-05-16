@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/blackgradient"/> <!-- Your gradient drawable -->
+    <item>
+        <bitmap
+            android:src="@drawable/loginbackground"
+            android:gravity="top|bottom|clip_vertical"
+            />
+    </item>
+</layer-list>
