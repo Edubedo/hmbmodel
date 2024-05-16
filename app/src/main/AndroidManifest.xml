@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Proyectohmbmodel"
         tools:targetApi="31">
         <activity
+            android:name=".MiCuenta"
+            android:exported="false" />
+        <activity
             android:name=".FormularioIniciarSesion"
             android:exported="false" />
         <activity
