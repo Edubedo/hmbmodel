@@ -28,7 +28,7 @@ public class PantallaInicial extends AppCompatActivity {
         btnLinkRegistro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(PantallaInicial.this, PantallaInicial.class));
+                startActivity(new Intent(PantallaInicial.this, FormularioCreacionUsuario.class));
                 finish();
             }
         });

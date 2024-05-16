@@ -13,6 +13,12 @@
         android:theme="@style/Theme.Proyectohmbmodel"
         tools:targetApi="31">
         <activity
+            android:name=".HomeUsuario"
+            android:exported="false" />
+        <activity
+            android:name=".FormularioCreacionUsuario"
+            android:exported="false" />
+        <activity
             android:name=".PantallaInicial"
             android:exported="false" />
         <activity
