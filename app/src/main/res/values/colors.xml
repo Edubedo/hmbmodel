@@ -6,4 +6,6 @@
     <color name="grey">#A3A3A3</color>
     <color name="usuario">#F2030925</color>
     <color name="principal">#011120</color>
+    <color name="fondo">#DCDDDE</color>
+    <color name="transparente">#00000000</color>
 </resources>
