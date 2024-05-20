@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "1017214330132",
+    "firebase_url": "https://loginhmb-d9aaa-default-rtdb.firebaseio.com",
+    "project_id": "loginhmb-d9aaa",
+    "storage_bucket": "loginhmb-d9aaa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1017214330132:android:0e7019fed30e543ca18e01",
+        "android_client_info": {
+          "package_name": "com.example.splash"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGn4S0fZBb9K4v8OxagZM0ueIc7qp8xEQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
