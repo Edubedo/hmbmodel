@@ -1,16 +1,12 @@
 package com.example.splash;
 
 import android.animation.ValueAnimator;
-<<<<<<< HEAD
 import android.content.Intent;
-=======
->>>>>>> 7f9da0d88f64f1d40316413ba6d76b3ee73da4da
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.view.animation.LinearInterpolator;
 
 import androidx.activity.EdgeToEdge;
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -50,13 +46,8 @@ public class homeUsuario extends AppCompatActivity {
             return insets;
         });
 
-<<<<<<< HEAD
         final ImageView backgroundOne = (ImageView) findViewById(R.id.background_one);
         final ImageView backgroundTwo = (ImageView) findViewById(R.id.background_two);
-=======
-        final ImageView fondo1 = (ImageView) findViewById(R.id.fondo1);
-        final ImageView fondo2 = (ImageView) findViewById(R.id.fondo2);
->>>>>>> 7f9da0d88f64f1d40316413ba6d76b3ee73da4da
 
         final ValueAnimator animator = ValueAnimator.ofFloat(0.0f, 1.0f);
         animator.setRepeatCount(ValueAnimator.INFINITE);
@@ -64,7 +55,6 @@ public class homeUsuario extends AppCompatActivity {
         animator.setDuration(10000L);
         animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
-<<<<<<< HEAD
             public void onAnimationUpdate(ValueAnimator animation) {
                 final float progress = (float) animation.getAnimatedValue();
                 final float width = backgroundOne.getWidth();
@@ -81,16 +71,5 @@ public class homeUsuario extends AppCompatActivity {
         FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.FrameLayout,fragment);
         fragmentTransaction.commit();
-=======
-            public void onAnimationUpdate(@NonNull ValueAnimator animation) {
-                final float progress=(float) animation.getAnimatedValue();
-                final float width=fondo1.getWidth();
-                final float translationX=width*progress;
-                fondo1.setTranslationX(translationX);
-                fondo2.setTranslationX(translationX-width);
-            }
-        });
-        animator.start();
->>>>>>> 7f9da0d88f64f1d40316413ba6d76b3ee73da4da
     }
 }
