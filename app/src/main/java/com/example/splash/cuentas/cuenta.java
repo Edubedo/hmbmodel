@@ -3,18 +3,16 @@ package com.example.splash.cuentas;
 public class cuenta {
 
     String cuenta;
-    String contraseña;
+    String contrasena;
     String gym;
-    String rango;
 
     public cuenta() {
     }
 
-    public cuenta(String cuenta, String contraseña, String gym, String rango) {
+    public cuenta(String cuenta, String contrasena, String gym) {
         this.cuenta = cuenta;
-        this.contraseña = contraseña;
+        this.contrasena = contrasena;
         this.gym = gym;
-        this.rango = rango;
     }
 
 
@@ -26,12 +24,12 @@ public class cuenta {
         this.cuenta = cuenta;
     }
 
-    public String getContraseña() {
-        return contraseña;
+    public String getContrasena() {
+        return contrasena;
     }
 
-    public void setContraseña(String contraseña) {
-        this.contraseña = contraseña;
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
     }
 
     public String getGym() {
@@ -40,14 +38,6 @@ public class cuenta {
 
     public void setGym(String gym) {
         this.gym = gym;
-    }
-
-    public String getRango() {
-        return rango;
-    }
-
-    public void setRango(String rango) {
-        this.rango = rango;
     }
 
 }

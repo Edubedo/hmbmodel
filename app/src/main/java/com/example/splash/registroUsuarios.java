@@ -2,6 +2,7 @@ package com.example.splash;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.util.Patterns;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -16,6 +17,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.example.splash.cuentas.cuenta;
@@ -28,11 +32,10 @@ public class registroUsuarios extends AppCompatActivity {
     Button seleccionar;
     CharSequence []gimnasios= {"Fit not fat","Bestias","Lobos","Power Gym","Pepe's Gym","FitGym"};
     TextView ngim;
-
-    EditText usuario;
-    EditText contra;
-    TextView rango;
-
+    FirebaseAuth mAuth;
+    EditText usuario, contra;
+    DatabaseReference reference;
+    String rango="usuario";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,8 +52,9 @@ public class registroUsuarios extends AppCompatActivity {
         ngim=findViewById(R.id.ngym);
         usuario=findViewById(R.id.usuario);
         contra=findViewById(R.id.contraseña);
-        rango.setText("usuario");
 
+        mAuth = FirebaseAuth.getInstance();
+        reference = FirebaseDatabase.getInstance().getReference("users");
         seleccionar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -71,22 +75,48 @@ public class registroUsuarios extends AppCompatActivity {
         boton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String textoUsuario = usuario.getText().toString().trim();
-                String textoContra = contra.getText().toString().trim();
-                String textoNgim = ngim.getText().toString().trim();
-                if(!textoUsuario.isEmpty() && !textoContra.isEmpty() && !textoNgim.isEmpty()) {
-                    FirebaseDatabase database = FirebaseDatabase.getInstance();
+                String cuenta = usuario.getText().toString().trim();
+                String contrasena = contra.getText().toString().trim();
+                String gym = ngim.getText().toString().trim();
+                if(!cuenta.isEmpty() && !contrasena.isEmpty() && !gym.isEmpty()) {
+                    mAuth.createUserWithEmailAndPassword(cuenta, contrasena)
+                            .addOnCompleteListener(task -> {
+                                if(task.isSuccessful()){
+                                    FirebaseUser user = mAuth.getCurrentUser();
+                                    if(user != null){
+                                        String userId = user.getUid();
+                                        cuenta helperClass = new cuenta(cuenta, contrasena, gym);
+                                        reference.child(userId).setValue(helperClass)
+                                                .addOnCompleteListener(task1 -> {
+                                                    if(task1.isSuccessful()){
+                                                        Toast.makeText(registroUsuarios.this, "Registro exitoso", Toast.LENGTH_SHORT).show();
+                                                        startActivity(new Intent(registroUsuarios.this, homeUsuario.class));
+                                                        finish();
+                                                    }else{
+                                                        Toast.makeText(registroUsuarios.this, "Error al registrar los datos", Toast.LENGTH_SHORT).show();
+                                                    }
+                                                });
+                                    }
+                                }else{
+                                    Toast.makeText(registroUsuarios.this, "Error en el registro: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                                }
+                            });
+                    //Ay lomeli :(
+                    /*FirebaseDatabase database = FirebaseDatabase.getInstance();
                     DatabaseReference myref = database.getReference();
                     admins admins = new admins();
-                    cuenta gymrat = new cuenta(usuario.getText().toString(), contra.getText().toString(), ngim.getText().toString(), rango.getText().toString());
+                    cuenta gymrat = new cuenta(usuario.getText().toString(), contra.getText().toString(), ngim.getText().toString(), rango);
                     myref.child("Usuario").setValue(usuario.getText().toString());
                     mediaPlayer.start();
                     startActivity(new Intent(registroUsuarios.this, homeUsuario.class));
-                    finish();
+                    finish();*/
                 }else{
                     Toast.makeText(registroUsuarios.this, "Pinche puto pendejo puto", Toast.LENGTH_SHORT).show();
                 }
             }
         });
+    }
+    private boolean isValidEmail(CharSequence email) {
+        return email != null && Patterns.EMAIL_ADDRESS.matcher(email).matches();
     }
 }
