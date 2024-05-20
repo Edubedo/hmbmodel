@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AlertDialog;
@@ -70,14 +71,21 @@ public class registroUsuarios extends AppCompatActivity {
         boton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FirebaseDatabase database= FirebaseDatabase.getInstance();
-                DatabaseReference myref=database.getReference();
-                admins admins= new admins();
-                cuenta gymrat= new cuenta(usuario.getText().toString(),contra.getText().toString(), ngim.getText().toString(),rango.getText().toString());
-                myref.child("Usuario").setValue(usuario.getText().toString());
-                mediaPlayer.start();
-                startActivity(new Intent(registroUsuarios.this, homeUsuario.class));
-                finish();
+                String textoUsuario = usuario.getText().toString().trim();
+                String textoContra = contra.getText().toString().trim();
+                String textoNgim = ngim.getText().toString().trim();
+                if(!textoUsuario.isEmpty() && !textoContra.isEmpty() && !textoNgim.isEmpty()) {
+                    FirebaseDatabase database = FirebaseDatabase.getInstance();
+                    DatabaseReference myref = database.getReference();
+                    admins admins = new admins();
+                    cuenta gymrat = new cuenta(usuario.getText().toString(), contra.getText().toString(), ngim.getText().toString(), rango.getText().toString());
+                    myref.child("Usuario").setValue(usuario.getText().toString());
+                    mediaPlayer.start();
+                    startActivity(new Intent(registroUsuarios.this, homeUsuario.class));
+                    finish();
+                }else{
+                    Toast.makeText(registroUsuarios.this, "Pinche puto pendejo puto", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
