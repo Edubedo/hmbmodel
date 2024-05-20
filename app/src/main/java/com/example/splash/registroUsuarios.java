@@ -2,7 +2,6 @@ package com.example.splash;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.util.Patterns;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -23,7 +22,6 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.example.splash.cuentas.cuenta;
-import com.example.splash.cuentas.admins;
 
 public class registroUsuarios extends AppCompatActivity {
 
@@ -101,22 +99,10 @@ public class registroUsuarios extends AppCompatActivity {
                                     Toast.makeText(registroUsuarios.this, "Error en el registro: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                                 }
                             });
-                    //Ay lomeli :(
-                    /*FirebaseDatabase database = FirebaseDatabase.getInstance();
-                    DatabaseReference myref = database.getReference();
-                    admins admins = new admins();
-                    cuenta gymrat = new cuenta(usuario.getText().toString(), contra.getText().toString(), ngim.getText().toString(), rango);
-                    myref.child("Usuario").setValue(usuario.getText().toString());
-                    mediaPlayer.start();
-                    startActivity(new Intent(registroUsuarios.this, homeUsuario.class));
-                    finish();*/
                 }else{
                     Toast.makeText(registroUsuarios.this, "Pinche puto pendejo puto", Toast.LENGTH_SHORT).show();
                 }
             }
         });
-    }
-    private boolean isValidEmail(CharSequence email) {
-        return email != null && Patterns.EMAIL_ADDRESS.matcher(email).matches();
     }
 }
