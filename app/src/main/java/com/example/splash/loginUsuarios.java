@@ -13,13 +13,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class loginUsuarios extends AppCompatActivity {
 
     private EditText editTextUsername, editTextPassword;
     private Button btnLogin;
     private SharedPreferences sharedPreferences;
     MediaPlayer mediaPlayer;
-
+    FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,30 +34,35 @@ public class loginUsuarios extends AppCompatActivity {
 
         sharedPreferences = getSharedPreferences("login", Context.MODE_PRIVATE);
         mediaPlayer=MediaPlayer.create(this,R.raw.lobo);
-
+        mAuth = FirebaseAuth.getInstance();
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String username = editTextUsername.getText().toString().trim();
                 String password = editTextPassword.getText().toString().trim();
-                if (username.equals("usuario") && password.equals("contraseña")) {
-                    SharedPreferences.Editor editor = sharedPreferences.edit();
-                    editor.putString("username", username);
-                    editor.putString("password", password);
-                    editor.apply();
-
-                    startActivity(new Intent(loginUsuarios.this, homeUsuario.class));
-                    finish();
-                } else if (username.equals("Temach") && password.equals("mi pastor")) {
-                    startActivity(new Intent(loginUsuarios.this, homeAdministrador.class));
-                    finish();
-                    mediaPlayer.start();
-
+                if (!username.isEmpty() && !password.isEmpty()) {
+                    loginUser(username, password);
                 } else {
-                    Toast.makeText(loginUsuarios.this, "Credenciales incorrectas", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(loginUsuarios.this, "Por favor ingrese sus datos", Toast.LENGTH_SHORT).show();
                 }
             }
         });
 
+    }
+    //Que sea lo que diosito quiera :(
+    public void loginUser(String email, String password) {
+        mAuth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, task -> {
+                    if (task.isSuccessful()) {
+                        FirebaseUser user = mAuth.getCurrentUser();
+                        if (user != null) {
+                            String userEmail = user.getEmail();
+                            startActivity(new Intent(loginUsuarios.this, homeUsuario.class));
+                            finish();
+                        }
+                    } else {
+                        Toast.makeText(loginUsuarios.this, "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show();
+                    }
+                });
     }
 }

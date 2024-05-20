@@ -34,7 +34,7 @@
         android:fontFamily="sans-serif-condensed"
         android:textColor="@color/white"
         android:hint="Contraseña"
-        android:inputType="text"
+        android:inputType="textPassword"
         android:minHeight="48dp"
         android:textColorHint="#85FFFFFF"
         tools:ignore="TextFields,SpeakableTextPresentCheck" />
@@ -54,7 +54,7 @@
         android:fontFamily="sans-serif-condensed"
         android:hint="Usuario"
         android:textColor="@color/white"
-        android:inputType="text"
+        android:inputType="textEmailAddress"
         android:minHeight="48dp"
         android:textColorHighlight="#FFFFFF"
         android:textColorHint="#85FFFFFF"
