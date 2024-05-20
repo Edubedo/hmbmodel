@@ -16,22 +16,22 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.example.splash.cuentas.cuenta;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.example.splash.cuentas.cuenta;
-import com.example.splash.cuentas.admins;
 
 public class registroUsuarios extends AppCompatActivity {
 
     MediaPlayer mediaPlayer;
     Button boton;
     Button seleccionar;
-    CharSequence []gimnasios= {"Fit not fat","Bestias","Lobos","Power Gym","Pepe's Gym","FitGym"};
+    CharSequence[] gimnasios = {"Fit not fat", "Bestias", "Lobos", "Power Gym", "Pepe's Gym", "FitGym"};
     TextView ngim;
 
     EditText usuario;
     EditText contra;
-    TextView rango;
+    String rango = "usuario";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,18 +43,18 @@ public class registroUsuarios extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        boton=findViewById(R.id.btnLogin);
-        mediaPlayer=MediaPlayer.create(this,R.raw.registrousuario);
-        seleccionar=findViewById(R.id.gimnasio);
-        ngim=findViewById(R.id.ngym);
-        usuario=findViewById(R.id.usuario);
-        contra=findViewById(R.id.contraseña);
-        rango.setText("usuario");
+
+        boton = findViewById(R.id.btnLogin);
+        mediaPlayer = MediaPlayer.create(this, R.raw.registrousuario);
+        seleccionar = findViewById(R.id.gimnasio);
+        ngim = findViewById(R.id.ngym);
+        usuario = findViewById(R.id.usuario);
+        contra = findViewById(R.id.contraseña);
 
         seleccionar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog.Builder alertDialogBuilder= new AlertDialog.Builder(registroUsuarios.this);
+                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(registroUsuarios.this);
                 alertDialogBuilder.setCancelable(true);
                 alertDialogBuilder.setSingleChoiceItems(gimnasios, 0, new DialogInterface.OnClickListener() {
                     @Override
@@ -63,28 +63,33 @@ public class registroUsuarios extends AppCompatActivity {
                         dialog.dismiss();
                     }
                 });
-                AlertDialog alertDialog =alertDialogBuilder.create();
+                AlertDialog alertDialog = alertDialogBuilder.create();
                 alertDialog.setCancelable(true);
                 alertDialog.show();
             }
         });
+
         boton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String textoUsuario = usuario.getText().toString().trim();
                 String textoContra = contra.getText().toString().trim();
                 String textoNgim = ngim.getText().toString().trim();
-                if(!textoUsuario.isEmpty() && !textoContra.isEmpty() && !textoNgim.isEmpty()) {
+                if (!textoUsuario.isEmpty() && !textoContra.isEmpty() && !textoNgim.isEmpty()) {
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
-                    DatabaseReference myref = database.getReference();
-                    admins admins = new admins();
-                    cuenta gymrat = new cuenta(usuario.getText().toString(), contra.getText().toString(), ngim.getText().toString(), rango.getText().toString());
-                    myref.child("Usuario").setValue(usuario.getText().toString());
-                    mediaPlayer.start();
-                    startActivity(new Intent(registroUsuarios.this, homeUsuario.class));
-                    finish();
-                }else{
-                    Toast.makeText(registroUsuarios.this, "Pinche puto pendejo puto", Toast.LENGTH_SHORT).show();
+                    DatabaseReference usersRef = database.getReference("users");
+                    String userId = usersRef.push().getKey();
+                    if (userId != null) {
+                        cuenta gymrat = new cuenta(textoUsuario, textoContra, textoNgim, rango);
+                        usersRef.child(userId).setValue(gymrat);
+                        mediaPlayer.start();
+                        startActivity(new Intent(registroUsuarios.this, homeUsuario.class));
+                        finish();
+                    } else {
+                        Toast.makeText(registroUsuarios.this, "Error al generar el ID del usuario", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    Toast.makeText(registroUsuarios.this, "Por favor, complete todos los campos", Toast.LENGTH_SHORT).show();
                 }
             }
         });
