@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".registroUsuarios"
+    tools:ignore="ExtraText">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="-10dp"
+        android:layout_marginBottom="-42dp"
+        app:srcCompat="@drawable/blackgradient" />
+
+    <EditText
+        android:id="@+id/contraseña"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="403dp"
+        android:layout_marginEnd="38dp"
+        android:autofillHints=""
+        android:background="@drawable/edittextstyle"
+        android:ems="10"
+        android:fontFamily="sans-serif-condensed"
+        android:hint="Contraseña"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColor="@color/white"
+        android:textColorHint="#85FFFFFF"
+        tools:ignore="TextFields,SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/usuario"
+        android:layout_width="341dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="319dp"
+        android:layout_marginEnd="38dp"
+        android:background="@drawable/edittextstyle"
+        android:ems="10"
+        android:fontFamily="sans-serif-condensed"
+        android:hint="Usuario"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        android:textColor="@color/white"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#85FFFFFF"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="31dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="85dp"
+        android:background="@drawable/boton_salir"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Iniciar Sesión"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="155dp"
+        android:fontFamily="sans-serif-condensed"
+        android:shadowColor="#00FFFFFF"
+        android:text="Registro"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#00FF0000"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        tools:text="Registro" />
+
+    <Button
+        android:id="@+id/gimnasio"
+        android:layout_width="254dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="76dp"
+        android:layout_marginBottom="224dp"
+        android:background="@color/grey"
+        android:fontFamily="sans-serif-condensed"
+        android:searchResultHighlightColor="@color/white"
+        android:text="Seleccione su gimnasio"
+        android:textColor="@color/black"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#85FFFFFF" />
+
+    <TextView
+        android:id="@+id/ngym"
+        android:layout_width="341dp"
+        android:layout_height="42dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="31dp"
+        android:layout_marginBottom="283dp"
+        android:fontFamily="sans-serif-condensed"
+        android:hint="Ningun gimnasio seleccionado"
+        android:text=""
+        android:textColor="@color/white"
+        android:textColorHint="#85FFFFFF"
+        android:textSize="18dp" />
+
+
+</RelativeLayout>

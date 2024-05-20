@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,18 +15,42 @@
         android:theme="@style/Theme.Splash"
         tools:targetApi="31">
         <activity
-            android:name=".PaginaLogin"
-            android:exported="false" />
+            android:name=".homeAdministrador"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".Login"
-            android:exported="false" />
+            android:name=".homeUsuario"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".MainActivity"
-            android:exported="false" />
+            android:name=".registroUsuarios"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".pantallaInicioAdministrador"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".login_administrador"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".elegirTipoUsuario"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".pantallaInicio"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".loginUsuarios"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".splash"
             android:exported="true"
-            android:theme="@style/Theme.Design.NoActionBar">
+            android:theme="@style/Theme.Design.NoActionBar"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mobilegim"
+    tools:context=".pantallaInicio"
+    tools:ignore="ExtraText">
+
+    <Button
+        android:id="@+id/btnLinkRegistro"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="173dp"
+        android:background="@drawable/boton_salir"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Crear una cuenta"
+        android:textColor="@android:color/white" />
+
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="-29dp"
+        android:layout_marginBottom="-47dp"
+        app:srcCompat="@drawable/blackgradient" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="65dp"
+        android:fontFamily="sans-serif-black"
+        android:shadowColor="#00FFFFFF"
+        android:text="HMB-MODEL"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#00FF0000"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        tools:text="HMB-MODEL" />
+
+
+    <Button
+        android:id="@+id/btnLinkLogin"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="27dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="95dp"
+        android:background="@drawable/boton_salir"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Inicia sesión"
+        android:textColor="@android:color/white" />
+
+
+</RelativeLayout>
