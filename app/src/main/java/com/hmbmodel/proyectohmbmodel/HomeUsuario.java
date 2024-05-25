@@ -49,7 +49,7 @@ public class HomeUsuario extends AppCompatActivity {
 
     // Método para manejar el clic en "Administrar gimnasios"
     public void redirectToAdministrarGimnasios(View view) {
-        Intent intent = new Intent(this, MiCuenta.class);
+        Intent intent = new Intent(this, AdministrarGimnasiosUsuarios.class);
         startActivity(intent);
     }
 

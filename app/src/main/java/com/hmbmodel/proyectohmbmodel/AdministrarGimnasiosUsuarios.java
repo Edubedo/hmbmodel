@@ -6,9 +6,6 @@ import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class AdministrarGimnasiosUsuarios extends AppCompatActivity {
 
@@ -20,11 +17,15 @@ public class AdministrarGimnasiosUsuarios extends AppCompatActivity {
 
     }
     public void redirectoToVerSuscripciones(View view) {
-        Intent intent = new Intent(this, MiCuenta.class);
+        Intent intent = new Intent(this, MisGimnasios.class);
         startActivity(intent);
     }
     public void redirectToSuscribirme(View view) {
-        Intent intent = new Intent(this, MiCuenta.class);
+        Intent intent = new Intent(this, FormularioSuscribirGimnasio.class);
+        startActivity(intent);
+    }
+    public void redirectToCrearGimnasio(View view) {
+        Intent intent = new Intent(this, formularioCrearGimnasio.class);
         startActivity(intent);
     }
 }

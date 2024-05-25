@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">proyectohmbmodel</string>
+    <string name="todo">TODO</string>
+    <string name="todoD">TODO</string>
+    <string name="todos">TODO</string>
+    <string name="mis_gimnasios">Mis gimnasios</string>
+    <string name="suscribirme_a_un_gimnasio">Suscribirme a un gimnasio</string>
+    <string name="crear_gimnasio">Crear gimnasio</string>
 </resources>
