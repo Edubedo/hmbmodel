@@ -110,7 +110,7 @@
                     android:layout_width="323dp"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:onClick="redirectToMiCuenta"
+                    android:onClick="redirectToSuscribirme"
                     android:orientation="vertical">
 
                     <ImageView
@@ -175,7 +175,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Ver mis suscripciones"
+                        android:text="Crear gimnasio"
                         android:textAlignment="center" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
