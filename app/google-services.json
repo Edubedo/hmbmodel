@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "259282493151",
+    "firebase_url": "https://hmbmodel-default-rtdb.firebaseio.com",
+    "project_id": "hmbmodel",
+    "storage_bucket": "hmbmodel.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:259282493151:android:a7f50bdb988c02ac12536a",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdq5cqZTVjbrzfbQ6LMUpmqHRoJ7D-fDk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:259282493151:android:ffad101a381ca8d812536a",
+        "android_client_info": {
+          "package_name": "com.hmb.model"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdq5cqZTVjbrzfbQ6LMUpmqHRoJ7D-fDk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:259282493151:android:bc8a88b18bb8986f12536a",
+        "android_client_info": {
+          "package_name": "com.hmbmodel.proyectohmbmodel"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdq5cqZTVjbrzfbQ6LMUpmqHRoJ7D-fDk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

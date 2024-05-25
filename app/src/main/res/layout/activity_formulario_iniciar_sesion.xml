@@ -39,7 +39,7 @@
         tools:ignore="TextFields,SpeakableTextPresentCheck" />
 
     <EditText
-        android:id="@+id/editTextUsername"
+        android:id="@+id/editTextEmail"
         android:layout_width="341dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -51,7 +51,7 @@
         android:background="@drawable/edittextstyle"
         android:ems="10"
         android:fontFamily="sans-serif-condensed"
-        android:hint="Usuario"
+        android:hint="Correo Electronico"
         android:inputType="text"
         android:minHeight="48dp"
         android:textColorHighlight="#FFFFFF"

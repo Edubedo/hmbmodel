@@ -6,7 +6,7 @@
     android:background="#fafafa"
     android:orientation="vertical">
 
-    <!-- Encabezado con mensaje de bienvenida y botón de cerrar sesión -->
+    <!-- ver gimnasios -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -28,12 +28,16 @@
             android:id="@+id/btnLogout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/arrow"
             android:background="?android:attr/selectableItemBackgroundBorderless"
-            android:contentDescription="Cerrar sesión" />
+            android:contentDescription="Cerrar sesión"
+            android:src="@drawable/arrow"
+            tools:ignore="TouchTargetSizeCheck" />
     </LinearLayout>
 
-    <!-- Contenido principal -->
+    <!-- Univeme a gimnasio -->
+
+    <!-- ver gimnasios -->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="444dp"
@@ -45,12 +49,13 @@
 
         <LinearLayout
             android:id="@+id/administrarGimnasiosLayout"
-            android:layout_width="361dp"
-            android:layout_height="180dp"
+            android:layout_width="337dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="redirectToAdministrarGimnasios"
             android:padding="16dp"
-            android:weightSum="2">
+            android:weightSum="2"
+            tools:ignore="DuplicateIds">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="318dp"
@@ -65,7 +70,7 @@
                     android:layout_width="335dp"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:onClick="redirectToAdministrarGimnasios"
+                    android:onClick="redirectoToVerSuscripciones"
                     android:orientation="vertical">
 
                     <ImageView
@@ -76,7 +81,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Administrar gimnasios"
+                        android:text="Ver mis suscripciones"
                         android:textAlignment="center" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -85,8 +90,8 @@
 
         <LinearLayout
             android:id="@+id/miCuentaLayout"
-            android:layout_width="364dp"
-            android:layout_height="167dp"
+            android:layout_width="339dp"
+            android:layout_height="116dp"
             android:layout_weight="1"
             android:onClick="redirectToMiCuenta"
             android:padding="16dp"
@@ -116,13 +121,111 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Mi cuenta"
+                        android:text="Suscribirme a un gimnasio"
                         android:textAlignment="center" />
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
         </LinearLayout>
+
+
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="444dp"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Agrega aquí el contenido principal de tu pantalla -->
+
+
+        <LinearLayout
+            android:id="@+id/administrarGimnasiosLayout"
+            android:layout_width="327dp"
+            android:layout_height="61dp"
+            android:layout_weight="1"
+            android:onClick="redirectToAdministrarGimnasios"
+            android:padding="16dp"
+            android:weightSum="2"
+            tools:ignore="DuplicateIds">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="318dp"
+                android:layout_height="match_parent"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:background="#fff"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="335dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:onClick="redirectToAdministrarGimnasios"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="320dp"
+                        android:layout_height="44dp"
+                        android:src="@drawable/ic_menu_gallery" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Ver mis suscripciones"
+                        android:textAlignment="center" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/miCuentaLayout"
+            android:layout_width="364dp"
+            android:layout_height="167dp"
+            android:layout_weight="1"
+            android:onClick="redirectToMiCuenta"
+            android:padding="16dp"
+            android:weightSum="2"
+            tools:ignore="DuplicateIds">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:background="#fff"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="323dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:onClick="redirectToMiCuenta"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="323dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/icons" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Suscribirme a un gimnasio"
+                        android:textAlignment="center" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
 
 </LinearLayout>
