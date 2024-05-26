@@ -49,4 +49,11 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+    <string name="mi_cuenta">Mi cuenta</string>
+    <string name="mis_suscripciones">Mis suscripciones</string>
+    <string name="administrar_gimnasios">Administrar gimnasios</string>
+    <string name="tododod">TODO</string>
+    <string name="dwdwdw">TODO</string>
+    <string name="wdwdwdw">TODO</string>
+    <string name="cerrar_sesi_nwdw">Cerrar sesión</string>
 </resources>

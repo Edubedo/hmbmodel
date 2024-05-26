@@ -58,4 +58,9 @@ public class HomeUsuario extends AppCompatActivity {
         Intent intent = new Intent(this, MiCuenta.class);
         startActivity(intent);
     }
+
+    public void redirectoToMisSuscripciones(View view) {
+        Intent intent = new Intent(this, MisSuscripcionesGym.class);
+        startActivity(intent);
+    }
 }

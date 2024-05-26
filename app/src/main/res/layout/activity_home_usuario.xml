@@ -1,9 +1,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#fafafa"
+    tools:context=".HomeUsuario"
     android:orientation="vertical">
 
     <!-- Encabezado con mensaje de bienvenida y botón de cerrar sesión -->
@@ -18,7 +18,7 @@
 
         <TextView
             android:id="@+id/textWelcomeMessage"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textColor="#ffffff"
@@ -28,101 +28,101 @@
             android:id="@+id/btnLogout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/arrow"
             android:background="?android:attr/selectableItemBackgroundBorderless"
-            android:contentDescription="Cerrar sesión" />
+            android:contentDescription="@string/cerrar_sesi_nwdw"
+            android:src="@drawable/arrow"
+            tools:ignore="TouchTargetSizeCheck" />
     </LinearLayout>
 
-    <!-- Contenido principal -->
+    <!-- Contenido principal con 3 opciones -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="444dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="16dp"
+        android:gravity="center"
+        android:layout_marginTop="20dp">
 
-        <!-- Agrega aquí el contenido principal de tu pantalla -->
-
-
+        <!-- Opción 1: Administrar gimnasios -->
         <LinearLayout
-            android:id="@+id/administrarGimnasiosLayout"
-            android:layout_width="361dp"
-            android:layout_height="180dp"
-            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="137dp"
+            android:background="@color/Color_P"
+            android:gravity="center"
             android:onClick="redirectToAdministrarGimnasios"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp"
             android:padding="16dp"
-            android:weightSum="2">
+            android:elevation="5dp">
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="318dp"
-                android:layout_height="match_parent"
-                android:layout_margin="12dp"
-                android:layout_weight="1"
-                android:background="#fff"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="2dp">
+            <ImageView
+                android:layout_width="320dp"
+                android:layout_height="44dp"
+                android:src="@drawable/ic_menu_gallery"
+                android:contentDescription="@string/tododod" />
 
-                <LinearLayout
-                    android:layout_width="335dp"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:onClick="redirectToAdministrarGimnasios"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="320dp"
-                        android:layout_height="44dp"
-                        android:src="@drawable/ic_menu_gallery" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Administrar gimnasios"
-                        android:textAlignment="center" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/administrar_gimnasios"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
         </LinearLayout>
 
+        <!-- Opción 2: Mi cuenta -->
         <LinearLayout
-            android:id="@+id/miCuentaLayout"
-            android:layout_width="364dp"
-            android:layout_height="167dp"
-            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="137dp"
+            android:background="@color/Color_P"
+            android:gravity="center"
             android:onClick="redirectToMiCuenta"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp"
             android:padding="16dp"
-            android:weightSum="2">
+            android:elevation="5dp">
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_margin="12dp"
-                android:layout_weight="1"
-                android:background="#fff"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="2dp">
+            <ImageView
+                android:layout_width="320dp"
+                android:layout_height="44dp"
+                android:src="@drawable/ic_menu_gallery"
+                android:contentDescription="@string/dwdwdw"
+                tools:ignore="ContentDescription" />
 
-                <LinearLayout
-                    android:layout_width="323dp"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:onClick="redirectToMiCuenta"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="323dp"
-                        android:layout_height="48dp"
-                        android:src="@drawable/icons" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Mi cuenta"
-                        android:textAlignment="center" />
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/mi_cuenta"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
         </LinearLayout>
-    </LinearLayout>
 
+        <!-- Opción 3: Mis suscripciones -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="137dp"
+            android:background="@color/Color_P"
+            android:gravity="center"
+            android:onClick="redirectoToMisSuscripciones"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:elevation="5dp">
+
+            <ImageView
+                android:layout_width="320dp"
+                android:layout_height="44dp"
+                android:src="@drawable/ic_menu_gallery"
+                android:contentDescription="@string/wdwdwdw" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/mis_suscripciones"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </LinearLayout>
 </LinearLayout>
