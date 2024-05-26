@@ -77,7 +77,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginStart="10dp"
                 android:layout_toEndOf="@id/image_profile"
-                android:text="Crear cuenta para administrar a tus clientes"
+                android:text="Crear una cuenta en HMB-MODEL"
                 android:textSize="14sp" />
 
         </RelativeLayout>
@@ -154,24 +154,11 @@
                     android:text=" " />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/edit_gimnasio"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:hint="Nombre del Gimnasio">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/gymname"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:drawableStart="@drawable/ic_account"
-                    android:drawablePadding="10dp"
-                    android:text=" " />
-            </com.google.android.material.textfield.TextInputLayout>
 
             <Button
                 android:id="@+id/buttonCreate"
+                android:background="@color/Color_P"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Crear"

@@ -26,9 +26,7 @@ public class HomeUsuario extends AppCompatActivity {
 
         // Obtener el nombre de usuario del SharedPreferences y establecerlo en el TextView
         String username = sharedPreferences.getString("username", "");
-        if (!username.isEmpty()) {
-            textWelcomeMessage.setText("¡Bienvenido/a, " + username + "!");
-        }
+            textWelcomeMessage.setText("¡Bienvenido/a, a HMB-MODEL");
 
         // Escuchar clics en el botón de cerrar sesión
         btnLogout.setOnClickListener(new View.OnClickListener() {

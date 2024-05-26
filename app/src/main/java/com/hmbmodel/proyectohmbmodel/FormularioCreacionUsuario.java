@@ -39,7 +39,6 @@ public class FormularioCreacionUsuario extends AppCompatActivity {
         editTextEmail = findViewById(R.id.email);
         editTextPhone = findViewById(R.id.phone);
         editTextPassword = findViewById(R.id.password);
-        editTextGymName = findViewById(R.id.gymname);
         buttonCreate = findViewById(R.id.buttonCreate);
 
         buttonCreate.setOnClickListener(v -> createUser());
@@ -50,9 +49,8 @@ public class FormularioCreacionUsuario extends AppCompatActivity {
         String email = editTextEmail.getText().toString().trim();
         String phone = editTextPhone.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
-        String nombre_gimnasio = editTextGymName.getText().toString().trim();
 
-        if (fullname.isEmpty() || email.isEmpty() || phone.isEmpty() || password.isEmpty() || nombre_gimnasio.isEmpty()) {
+        if (fullname.isEmpty() || email.isEmpty() || phone.isEmpty() || password.isEmpty()) {
             Toast.makeText(this, "Por favor, complete todos los campos", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -66,7 +64,6 @@ public class FormularioCreacionUsuario extends AppCompatActivity {
         user.put("email", email);
         user.put("phone", phone);
         user.put("password", password);
-        user.put("nombre_gimnasio", nombre_gimnasio);
 
         db.collection("usuarios").add(user)
                 .addOnSuccessListener(documentReference -> {

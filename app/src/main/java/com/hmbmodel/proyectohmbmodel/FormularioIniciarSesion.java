@@ -68,15 +68,21 @@ public class FormularioIniciarSesion extends AppCompatActivity {
                         // Si se encuentra algún documento con el correo electrónico ingresado
                         // y la contraseña coincide
                         if (!task.getResult().isEmpty()) {
-                            // Las credenciales son correctas
-                            // Redirigimos al usuario a la pantalla de inicio
-                            SharedPreferences.Editor editor = sharedPreferences.edit();
-                            editor.putString("username", username);
-                            editor.putString("password", password);
-                            editor.apply();
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                // Las credenciales son correctas
+                                // Obtener el nombre completo del usuario
+                                String fullname = document.getString("fullname");
 
-                            startActivity(new Intent(FormularioIniciarSesion.this, HomeUsuario.class));
-                            finish();
+                                // Guardar nombre de usuario y nombre completo en SharedPreferences
+                                SharedPreferences.Editor editor = sharedPreferences.edit();
+                                editor.putString("username", username);
+                                editor.putString("fullname", fullname);
+                                editor.apply();
+
+                                // Redirigir al usuario a la pantalla de inicio
+                                startActivity(new Intent(FormularioIniciarSesion.this, HomeUsuario.class));
+                                finish();
+                            }
                         } else {
                             // Si no se encuentra ningún documento que coincida con las credenciales
                             // Muestra un mensaje de error
