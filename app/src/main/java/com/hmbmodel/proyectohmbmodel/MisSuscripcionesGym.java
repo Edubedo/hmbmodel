@@ -38,7 +38,7 @@ public class MisSuscripcionesGym extends AppCompatActivity {
         recyclerViewSuscripciones.setLayoutManager(new LinearLayoutManager(this));
 
         suscripcionList = new ArrayList<>();
-        adapter = new SuscripcionAdapter(suscripcionList);
+        adapter = new SuscripcionAdapter(this, suscripcionList);
         recyclerViewSuscripciones.setAdapter(adapter);
 
         db.collection("suscripciones")

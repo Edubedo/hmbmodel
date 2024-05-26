@@ -1,5 +1,7 @@
 package com.hmbmodel.proyectohmbmodel;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,8 +15,10 @@ import java.util.List;
 public class SuscripcionAdapter extends RecyclerView.Adapter<SuscripcionAdapter.SuscripcionViewHolder> {
 
     private List<Suscripcion> suscripcionList;
+    private Context context;
 
-    public SuscripcionAdapter(List<Suscripcion> suscripcionList) {
+    public SuscripcionAdapter(Context context, List<Suscripcion> suscripcionList) {
+        this.context = context;
         this.suscripcionList = suscripcionList;
     }
 
@@ -32,6 +36,15 @@ public class SuscripcionAdapter extends RecyclerView.Adapter<SuscripcionAdapter.
         holder.textFechaIngreso.setText(suscripcion.getFechaIngreso());
         holder.textFechaPago.setText(suscripcion.getFechaPago());
         holder.textNombrePropietario.setText(suscripcion.getNombrePropietario());
+
+        holder.itemView.setOnClickListener(v -> {
+            Intent intent = new Intent(context, DetalleSuscripcionActivity.class);
+            intent.putExtra("nombreGimnasio", suscripcion.getNombreGimnasio());
+            intent.putExtra("fechaIngreso", suscripcion.getFechaIngreso());
+            intent.putExtra("fechaPago", suscripcion.getFechaPago());
+            intent.putExtra("nombrePropietario", suscripcion.getNombrePropietario());
+            context.startActivity(intent);
+        });
     }
 
     @Override
