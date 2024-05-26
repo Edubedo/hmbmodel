@@ -79,7 +79,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/mis_gimnasios"
+            android:text="@string/mis_suscripciones"
             android:textAlignment="center"
             android:textColor="#424242" />
     </LinearLayout>

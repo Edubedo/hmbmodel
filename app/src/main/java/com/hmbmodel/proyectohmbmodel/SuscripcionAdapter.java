@@ -5,10 +5,14 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.List;
 
@@ -45,6 +49,24 @@ public class SuscripcionAdapter extends RecyclerView.Adapter<SuscripcionAdapter.
             intent.putExtra("nombrePropietario", suscripcion.getNombrePropietario());
             context.startActivity(intent);
         });
+
+        holder.buttonDelete.setOnClickListener(v -> {
+            // Eliminar suscripción de Firestore
+            FirebaseFirestore db = FirebaseFirestore.getInstance();
+            db.collection("suscripciones").document(suscripcion.getId())
+                    .delete()
+                    .addOnSuccessListener(aVoid -> {
+                        // Suscripción eliminada
+                        Toast.makeText(context, "Suscripción eliminada", Toast.LENGTH_SHORT).show();
+                        // Redirigir a la sección de "Mis Gimnasios"
+                        Intent intent = new Intent(context, HomeUsuario.class);
+                        context.startActivity(intent);
+                    })
+                    .addOnFailureListener(e -> {
+                        // Error al eliminar
+                        Toast.makeText(context, "Error al eliminar la suscripción", Toast.LENGTH_SHORT).show();
+                    });
+        });
     }
 
     @Override
@@ -57,6 +79,7 @@ public class SuscripcionAdapter extends RecyclerView.Adapter<SuscripcionAdapter.
         TextView textFechaIngreso;
         TextView textFechaPago;
         TextView textNombrePropietario;
+        Button buttonDelete;
 
         public SuscripcionViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -64,6 +87,7 @@ public class SuscripcionAdapter extends RecyclerView.Adapter<SuscripcionAdapter.
             textFechaIngreso = itemView.findViewById(R.id.textFechaIngreso);
             textFechaPago = itemView.findViewById(R.id.textFechaPago);
             textNombrePropietario = itemView.findViewById(R.id.textNombrePropietario);
+            buttonDelete = itemView.findViewById(R.id.buttonDelete);
         }
     }
 }

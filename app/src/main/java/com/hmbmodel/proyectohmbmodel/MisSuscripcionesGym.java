@@ -47,7 +47,13 @@ public class MisSuscripcionesGym extends AppCompatActivity {
                     if (task.isSuccessful()) {
                         for (QueryDocumentSnapshot document : task.getResult()) {
                             Suscripcion suscripcion = document.toObject(Suscripcion.class);
-                            suscripcionList.add(suscripcion);
+                            suscripcionList.add(new Suscripcion(
+                                    document.getId(),
+                                    suscripcion.getNombreGimnasio(),
+                                    suscripcion.getFechaIngreso(),
+                                    suscripcion.getFechaPago(),
+                                    suscripcion.getNombrePropietario()
+                            ));
                         }
                         adapter.notifyDataSetChanged();
                     } else {
