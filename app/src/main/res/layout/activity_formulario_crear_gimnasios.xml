@@ -26,27 +26,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/Color_P"
-            android:elevation="10dp">
-
-            <ImageView
-                android:id="@+id/image_back"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="15dp"
-                android:src="@drawable/ic_arrow_back"
-                android:onClick="redirectToAdministrarGimnasios"
-                android:contentDescription="TODO" />
-
-        </LinearLayout>
-
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="140dp"
-            android:background="@drawable/header_bg"
+            android:background="@color/principal"
             android:elevation="10dp"
             android:padding="20dp"
             tools:ignore="ExtraText">>

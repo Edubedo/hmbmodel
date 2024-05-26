@@ -29,20 +29,7 @@ public class HomeUsuario extends AppCompatActivity {
             textWelcomeMessage.setText("¡Bienvenido/a, a HMB-MODEL");
 
         // Escuchar clics en el botón de cerrar sesión
-        btnLogout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Limpiar SharedPreferences
-                SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.clear();
-                editor.apply();
 
-                // Redirigir al usuario a la pantalla de inicio de sesión
-                Intent intent = new Intent(HomeUsuario.this, FormularioIniciarSesion.class);
-                startActivity(intent);
-                finish();
-            }
-        });
     }
 
     // Método para manejar el clic en "Administrar gimnasios"
@@ -60,5 +47,17 @@ public class HomeUsuario extends AppCompatActivity {
     public void redirectoToMisSuscripciones(View view) {
         Intent intent = new Intent(this, MisSuscripcionesGym.class);
         startActivity(intent);
+    }
+
+    public void logout(View view) {
+        // Limpiar SharedPreferences
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.clear();
+        editor.apply();
+
+        // Redirigir al usuario a la pantalla de inicio de sesión
+        Intent intent = new Intent(HomeUsuario.this, FormularioIniciarSesion.class);
+        startActivity(intent);
+        finish();
     }
 }

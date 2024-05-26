@@ -1,13 +1,16 @@
 package com.hmbmodel.proyectohmbmodel;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
+import android.content.Intent;
 
 public class ActivityDetalleGimnasio extends AppCompatActivity {
 
     private TextView textViewNombre, textViewPropietario, textViewEmail, textViewTelefono, textViewDescripcion;
+    private SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +22,9 @@ public class ActivityDetalleGimnasio extends AppCompatActivity {
         textViewEmail = findViewById(R.id.textViewEmail);
         textViewTelefono = findViewById(R.id.textViewTelefono);
         textViewDescripcion = findViewById(R.id.textViewDescripcion);
+
+        // Obtener la instancia de SharedPreferences
+        sharedPreferences = getSharedPreferences("login", MODE_PRIVATE);
 
         // Obtener los datos del Intent
         Bundle extras = getIntent().getExtras();
@@ -36,5 +42,17 @@ public class ActivityDetalleGimnasio extends AppCompatActivity {
             textViewTelefono.setText(telefono);
             textViewDescripcion.setText(descripcion);
         }
+    }
+
+    public void logout(View view) {
+        // Limpiar SharedPreferences
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.clear();
+        editor.apply();
+
+        // Redirigir al usuario a la pantalla de inicio de sesión
+        Intent intent = new Intent(ActivityDetalleGimnasio.this, FormularioIniciarSesion.class);
+        startActivity(intent);
+        finish();
     }
 }

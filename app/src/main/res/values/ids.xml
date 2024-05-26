@@ -2,4 +2,6 @@
 <resources>
     <item name="main" type="id" />
     <item name="redirectSuscribirme" type="id" />
+    <item name="textViewTelefono" type="id" />
+    <item name="recyclerViewUsuarios" type="id" />
 </resources>

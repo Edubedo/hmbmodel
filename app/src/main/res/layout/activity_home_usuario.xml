@@ -13,7 +13,7 @@
         android:orientation="horizontal"
         android:gravity="center_vertical"
         android:padding="16dp"
-        android:background="@drawable/header_bg"
+        android:background="@color/principal"
         android:elevation="10dp">
 
         <TextView
@@ -22,15 +22,17 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textColor="#ffffff"
+            android:text="@string/inicio"
             android:textSize="18sp" />
 
         <ImageButton
             android:id="@+id/btnLogout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="logout"
             android:background="?android:attr/selectableItemBackgroundBorderless"
             android:contentDescription="@string/cerrar_sesi_nwdw"
-            android:src="@drawable/arrow"
+            android:src="@drawable/ic_exit"
             tools:ignore="TouchTargetSizeCheck" />
     </LinearLayout>
 
@@ -47,7 +49,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="137dp"
-            android:background="@color/Color_P"
+            android:background="@color/principal"
             android:gravity="center"
             android:onClick="redirectToAdministrarGimnasios"
             android:orientation="vertical"
@@ -58,7 +60,7 @@
             <ImageView
                 android:layout_width="320dp"
                 android:layout_height="44dp"
-                android:src="@drawable/ic_menu_gallery"
+                android:src="@drawable/ic_home"
                 android:contentDescription="@string/tododod" />
 
             <TextView
@@ -74,7 +76,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="137dp"
-            android:background="@color/Color_P"
+            android:background="@color/principal"
             android:gravity="center"
             android:onClick="redirectToMiCuenta"
             android:orientation="vertical"
@@ -85,7 +87,7 @@
             <ImageView
                 android:layout_width="320dp"
                 android:layout_height="44dp"
-                android:src="@drawable/ic_menu_gallery"
+                android:src="@drawable/ic_user_circle"
                 android:contentDescription="@string/dwdwdw"
                 tools:ignore="ContentDescription" />
 

@@ -1,6 +1,9 @@
 package com.hmbmodel.proyectohmbmodel;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -17,6 +20,7 @@ public class MiCuenta extends AppCompatActivity {
     private TextView textViewFullName;
     private TextView textViewEmail;
     private TextView textViewPhone;
+    private SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +42,11 @@ public class MiCuenta extends AppCompatActivity {
             return insets;
         });
 
-        // Obtener el correo electrónico del usuario (puedes obtenerlo de donde lo necesites en tu aplicación)
-        String userEmail = "ezescobedo27@gmail.com";
+        // Inicializar SharedPreferences
+        sharedPreferences = getSharedPreferences("login", MODE_PRIVATE);
+
+        // Obtener el correo electrónico del usuario
+        String userEmail = sharedPreferences.getString("email", "");
 
         // Buscar al usuario en la base de datos y mostrar sus datos
         buscarUsuario(userEmail);
@@ -66,9 +73,20 @@ public class MiCuenta extends AppCompatActivity {
                             textViewEmail.setText(email);
                             textViewPhone.setText(phone);
                         }
-                    } else {
-                        // Manejar errores
-                    }
+                    }  // Manejar errores
+
                 });
+    }
+
+    public void logout(View view) {
+        // Limpiar SharedPreferences
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.clear();
+        editor.apply();
+
+        // Redirigir al usuario a la pantalla de inicio de sesión
+        Intent intent = new Intent(MiCuenta.this, FormularioIniciarSesion.class);
+        startActivity(intent);
+        finish();
     }
 }

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fafafa"
+    android:background="@drawable/eablogo"
     tools:context=".AdministrarGimnasiosUsuarios"
     android:orientation="vertical">
 
@@ -13,7 +13,7 @@
         android:orientation="horizontal"
         android:gravity="center_vertical"
         android:padding="16dp"
-        android:background="@drawable/header_bg"
+        android:background="@color/principal"
         android:elevation="10dp">
 
         <TextView
@@ -22,116 +22,119 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textColor="#ffffff"
+            android:text="Administrador de gimnasios"
             android:textSize="18sp" />
 
         <ImageButton
             android:id="@+id/btnLogout"
+            android:onClick="logout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="?android:attr/selectableItemBackgroundBorderless"
             android:contentDescription="@string/cerrar_sesi_n"
-            android:src="@drawable/arrow"
+            android:src="@drawable/ic_exit"
             tools:ignore="TouchTargetSizeCheck" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/redirectMisGimnasios"
-        android:layout_width="411dp"
-        android:layout_height="94dp"
-        android:layout_margin="5dp"
-        android:background="@color/Color_P"
+        android:layout_width="395dp"
+        android:layout_height="110dp"
+        android:layout_margin="8dp"
+        android:background="@color/design_default_color_background"
         android:gravity="center"
         android:onClick="redirectToMisGimnasios"
-        android:orientation="vertical"
-        tools:ignore="UseCompoundDrawables,VisualLintBounds">
+        android:orientation="vertical">
 
         <ImageView
-            android:layout_width="320dp"
-            android:layout_height="44dp"
+            android:layout_width="160dp"
+            android:layout_height="80dp"
             android:contentDescription="@string/todo"
-            android:src="@drawable/ic_menu_gallery" />
+            android:src="@drawable/ic_list" />
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/mis_gimnasios"
             android:textAlignment="center"
-            android:textColor="#424242" />
+            android:textColor="#424242"
+            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/redirectToMisSuscripciones"
-        android:layout_width="411dp"
-        android:layout_height="94dp"
-        android:layout_margin="5dp"
-        android:background="@color/Color_P"
+        android:layout_width="match_parent"
+        android:background="@color/design_default_color_background"
+
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
         android:gravity="center"
         android:onClick="redirectoToVerSuscripciones"
-        android:orientation="vertical"
-        tools:ignore="UseCompoundDrawables,VisualLintBounds">
+        android:orientation="vertical">
 
         <ImageView
-            android:layout_width="320dp"
-            android:layout_height="44dp"
+            android:layout_width="160dp"
+            android:layout_height="80dp"
             android:contentDescription="@string/todo"
-            android:src="@drawable/ic_menu_gallery" />
+            android:src="@drawable/ic_key" />
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/mis_suscripciones"
             android:textAlignment="center"
-            android:textColor="#424242" />
+            android:textColor="#424242"
+            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/redirectSuscribirme"
-        android:layout_width="400dp"
-        android:layout_height="124dp"
-        android:layout_margin="5dp"
-        android:background="@color/Color_P"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_margin="8dp"
+
+        android:background="@color/design_default_color_background"
         android:gravity="center"
         android:onClick="redirectToSuscribirme"
-        android:orientation="vertical"
-        tools:ignore="UseCompoundDrawables,VisualLintBounds">
+        android:orientation="vertical">
 
         <ImageView
-            android:layout_width="320dp"
-            android:layout_height="44dp"
+            android:layout_width="160dp"
+            android:layout_height="80dp"
             android:contentDescription="@string/todo"
-            android:src="@drawable/ic_menu_gallery" />
+            android:src="@drawable/ic_add_circle" />
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/suscribirme_a_un_gimnasio"
             android:textAlignment="center"
-            android:textColor="#424242" />
+            android:textColor="#424242"
+            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/redirectCrearGimnasio"
-        android:layout_width="411dp"
-        android:layout_height="111dp"
-        android:layout_margin="5dp"
-        android:background="@color/Color_P"
+        android:layout_width="match_parent"
+        android:layout_height="102dp"
+        android:layout_margin="8dp"
+        android:background="@color/design_default_color_background"
         android:gravity="center"
         android:onClick="redirectToCrearGimnasio"
-        android:orientation="vertical"
-        tools:ignore="UseCompoundDrawables,VisualLintBounds">
+        android:orientation="vertical">
 
         <ImageView
-            android:layout_width="320dp"
-            android:layout_height="44dp"
+            android:layout_width="160dp"
+            android:layout_height="80dp"
             android:contentDescription="@string/todo"
-            android:src="@drawable/ic_menu_gallery" />
+            android:src="@drawable/ic_add_circle" />
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/crear_gimnasio"
             android:textAlignment="center"
-            android:textColor="#424242" />
+            android:textSize="16sp" />
     </LinearLayout>
 
 </LinearLayout>

@@ -1,8 +1,10 @@
 package com.hmbmodel.proyectohmbmodel;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-
+import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -18,12 +20,11 @@ import java.util.List;
 
 public class MisGimnasios extends AppCompatActivity {
 
-    private FirebaseFirestore db;
-    private RecyclerView recyclerViewGimnasios;
     private GimnasioAdapter adapter;
     private List<Gimnasio> gimnasioList;
     private SharedPreferences sharedPreferences;
 
+    @SuppressLint("NotifyDataSetChanged")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,8 +44,8 @@ public class MisGimnasios extends AppCompatActivity {
             return;
         }
 
-        db = FirebaseFirestore.getInstance();
-        recyclerViewGimnasios = findViewById(R.id.recyclerViewGimnasios);
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        RecyclerView recyclerViewGimnasios = findViewById(R.id.recyclerViewGimnasios);
         recyclerViewGimnasios.setLayoutManager(new LinearLayoutManager(this));
 
         gimnasioList = new ArrayList<>();
@@ -69,9 +70,20 @@ public class MisGimnasios extends AppCompatActivity {
                             ));
                         }
                         adapter.notifyDataSetChanged();
-                    } else {
-                        // Maneja errores
-                    }
+                    }  // Maneja errores
+
                 });
+    }
+
+    public void logout(View view) {
+        // Limpiar SharedPreferences
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.clear();
+        editor.apply();
+
+        // Redirigir al usuario a la pantalla de inicio de sesión
+        Intent intent = new Intent(MisGimnasios.this, FormularioIniciarSesion.class);
+        startActivity(intent);
+        finish();
     }
 }

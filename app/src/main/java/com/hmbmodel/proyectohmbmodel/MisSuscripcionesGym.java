@@ -1,6 +1,9 @@
 package com.hmbmodel.proyectohmbmodel;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -21,6 +24,7 @@ public class MisSuscripcionesGym extends AppCompatActivity {
     private RecyclerView recyclerViewSuscripciones;
     private SuscripcionAdapter adapter;
     private List<Suscripcion> suscripcionList;
+    private SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +45,15 @@ public class MisSuscripcionesGym extends AppCompatActivity {
         adapter = new SuscripcionAdapter(this, suscripcionList);
         recyclerViewSuscripciones.setAdapter(adapter);
 
+        // Obtener SharedPreferences
+        sharedPreferences = getSharedPreferences("login", MODE_PRIVATE);
+
+        // Cargar suscripciones
+        cargarSuscripciones();
+
+    }
+
+    private void cargarSuscripciones() {
         db.collection("suscripciones")
                 .get()
                 .addOnCompleteListener(task -> {
@@ -57,8 +70,20 @@ public class MisSuscripcionesGym extends AppCompatActivity {
                         }
                         adapter.notifyDataSetChanged();
                     } else {
-                        // Maneja errores
+                        // Manejar errores
                     }
                 });
+    }
+
+    public void logout(View view) {
+        // Limpiar SharedPreferences
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.clear();
+        editor.apply();
+
+        // Redirigir al usuario a la pantalla de inicio de sesión
+        Intent intent = new Intent(MisSuscripcionesGym.this, FormularioIniciarSesion.class);
+        startActivity(intent);
+        finish();
     }
 }
