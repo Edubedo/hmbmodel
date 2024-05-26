@@ -10,7 +10,7 @@
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="Hola"
+        android:text="@string/hola"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,6 +34,17 @@
             android:padding="20dp"
             tools:ignore="ExtraText">>
 
+            <TextView
+                android:id="@+id/textview_descrip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/image_profile"
+                android:text="Crear usuario"                android:textColor="#B3E5FC"
+
+                android:textSize="14sp" />
+
             <ImageView
                 android:id="@+id/image_profile"
                 android:layout_width="100dp"
@@ -45,22 +56,23 @@
                 android:id="@+id/textview_fullname"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="10dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="12dp"
+                android:layout_marginBottom="20dp"
                 android:layout_toEndOf="@id/image_profile"
                 android:includeFontPadding="false"
-                android:text="Crear cuenta"
+                android:text="@string/app_name"
+                android:textColor="#000"
+
                 android:textSize="20sp" />
             <!--android:fontFamily="@font/bunglee" -->
-
-            <TextView
                 android:id="@+id/textview_descrip"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="10dp"
                 android:layout_toEndOf="@id/image_profile"
-                android:text="Crear una cuenta en HMB-MODEL"
+                android:text="Crear una cuenta"
                 android:textSize="14sp" />
 
         </RelativeLayout>
@@ -76,7 +88,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:hint="Nombre Completo">
+                android:hint="@string/nombre_completo">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/fullname"
@@ -92,7 +104,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:hint="Correo Electronico">
+                android:hint="@string/correo_electronico">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/email"
@@ -100,7 +112,7 @@
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/ic_email"
                     android:drawablePadding="10dp"
-                    android:text=" " />
+                    android:text="@string/sxscscs" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -144,9 +156,9 @@
                 android:layout_height="wrap_content"
                 android:background="@color/Color_P"
                 android:text="Crear"
-                android:textColor="#37474F"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="TextContrastCheck" />
 
 
         </LinearLayout>

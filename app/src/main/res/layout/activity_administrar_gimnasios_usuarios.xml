@@ -1,5 +1,4 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -22,7 +21,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textColor="#ffffff"
-            android:text="Administrador de gimnasios"
+            android:text="@string/administrador_de_gimnasios"
             android:textSize="18sp" />
 
         <ImageButton
@@ -41,7 +40,7 @@
         android:layout_width="395dp"
         android:layout_height="110dp"
         android:layout_margin="8dp"
-        android:background="@color/design_default_color_background"
+        android:background="@color/secundario"
         android:gravity="center"
         android:onClick="redirectToMisGimnasios"
         android:orientation="vertical">
@@ -57,14 +56,14 @@
             android:layout_height="wrap_content"
             android:text="@string/mis_gimnasios"
             android:textAlignment="center"
-            android:textColor="#424242"
+            android:textColor="@android:color/white"
             android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/redirectToMisSuscripciones"
         android:layout_width="match_parent"
-        android:background="@color/design_default_color_background"
+        android:background="@color/secundario"
 
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
@@ -83,7 +82,7 @@
             android:layout_height="wrap_content"
             android:text="@string/mis_suscripciones"
             android:textAlignment="center"
-            android:textColor="#424242"
+            android:textColor="@android:color/white"
             android:textSize="16sp" />
     </LinearLayout>
 
@@ -93,7 +92,7 @@
         android:layout_height="120dp"
         android:layout_margin="8dp"
 
-        android:background="@color/design_default_color_background"
+        android:background="@color/secundario"
         android:gravity="center"
         android:onClick="redirectToSuscribirme"
         android:orientation="vertical">
@@ -109,7 +108,7 @@
             android:layout_height="wrap_content"
             android:text="@string/suscribirme_a_un_gimnasio"
             android:textAlignment="center"
-            android:textColor="#424242"
+            android:textColor="@android:color/white"
             android:textSize="16sp" />
     </LinearLayout>
 
@@ -118,7 +117,7 @@
         android:layout_width="match_parent"
         android:layout_height="102dp"
         android:layout_margin="8dp"
-        android:background="@color/design_default_color_background"
+        android:background="@color/secundario"
         android:gravity="center"
         android:onClick="redirectToCrearGimnasio"
         android:orientation="vertical">
@@ -133,7 +132,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/crear_gimnasio"
-            android:textAlignment="center"
+            android:textAlignment="center"                android:textColor="@android:color/white"
+
             android:textSize="16sp" />
     </LinearLayout>
 

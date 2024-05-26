@@ -35,50 +35,73 @@
             android:src="@drawable/ic_exit"
             tools:ignore="TouchTargetSizeCheck" />
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="414dp"
+        android:layout_height="735dp"
+        android:background="@color/principal"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:onClick="redirectToAdministrarGimnasios"
 
-    <TextView
-        android:id="@+id/textNombreGimnasioDetalle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginStart="16dp"
-        android:text="Nombre del Gimnasio"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:textColor="#ffffff"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
-    <TextView
-        android:id="@+id/textFechaIngresoDetalle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:text="Fecha de Ingreso"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textNombreGimnasioDetalle" />
 
-    <TextView
-        android:id="@+id/textFechaPagoDetalle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:text="Fecha de Pago"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textFechaIngresoDetalle" />
 
-    <TextView
-        android:id="@+id/textNombrePropietarioDetalle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:text="Nombre del Propietario"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textFechaPagoDetalle" />
+        <TextView
+            android:id="@+id/textNombreGimnasioDetalle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="16dp"
+            android:text="Nombre del Gimnasio"
+            android:textSize="20sp"            android:textColor="#ffffff"
+
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textFechaIngresoDetalle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:text="Fecha de Ingreso"            android:textColor="#ffffff"
+
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textNombreGimnasioDetalle" />
+
+        <TextView
+            android:id="@+id/textFechaPagoDetalle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:text="Fecha de Pago"            android:textColor="#ffffff"
+
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textFechaIngresoDetalle" />
+
+        <TextView
+            android:id="@+id/textNombrePropietarioDetalle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"            android:textColor="#ffffff"
+
+            android:layout_marginStart="16dp"
+            android:text="Nombre del Propietario"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textFechaPagoDetalle" />
+
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

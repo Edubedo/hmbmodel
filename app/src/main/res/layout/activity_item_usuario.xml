@@ -10,6 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:backgroundTint="@color/principal"
+        android:background="@color/principal"
         android:padding="16dp">
 
         <TextView

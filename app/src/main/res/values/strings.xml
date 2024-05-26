@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">proyectohmbmodel</string>
+    <string name="app_name">HMB-MODEL</string>
     <string name="todo">TODO</string>
     <string name="todoD">TODO</string>
     <string name="todos">TODO</string>
@@ -58,4 +58,26 @@
     <string name="cerrar_sesi_nwdw">Cerrar sesión</string>
     <string name="detalles_del_gimnasio">Detalles del gimnasio</string>
     <string name="inicio">Inicio</string>
+    <string name="nombre_del_gimnasio">Nombre del Gimnasio</string>
+    <string name="fecha_de_ingreso">Fecha de Ingreso</string>
+    <string name="fecha_de_pago">Fecha de Pago</string>
+    <string name="borrar">Borrar</string>
+    <string name="nombre_del_propietario">Nombre del Propietario</string>
+    <string name="descripci_n">Descripción</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="mis_gimnasiosS">Mis gimnasios</string>
+    <string name="correo_electr_nico">Correo Electrónico</string>
+    <string name="suscribirme">Suscribirme</string>
+    <string name="direcci_n">Dirección</string>
+    <string name="suscribirme_a_gimnasio">Suscribirme a gimnasio</string>
+    <string name="suscribirme_un_gimnasio_en_hmb_model">Suscribirme un gimnasio</string>
+    <string name="hola">Hola</string>
+    <string name="crear_cuenta">Crear cuenta</string>
+    <string name="nombre_completo">Nombre Completo</string>
+    <string name="correo_electronico">Correo Electronico</string>
+    <string name="sxscscs" />
+    <string name="wwdwd">Hola</string>
+    <string name="nombre_del_gimnasiowdw">Nombre del Gimnasio</string>
+    <string name="crear_un_gimnasiowdwd">Crear un gimnasio</string>
+    <string name="administrador_de_gimnasios">Administrador de gimnasios</string>
 </resources>

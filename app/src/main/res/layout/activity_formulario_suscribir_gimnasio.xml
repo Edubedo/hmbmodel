@@ -10,11 +10,11 @@
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="Hola"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -39,18 +39,22 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_centerVertical="true"
-                android:src="@drawable/userss" />
+                android:src="@drawable/userss"
+                tools:ignore="ImageContrastCheck"
+                android:importantForAccessibility="no" />
 
             <TextView
                 android:id="@+id/textview_fullname"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_centerVertical="true"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="10dp"                android:textColor="#000"
+
                 android:layout_toEndOf="@id/image_profile"
                 android:includeFontPadding="false"
-                android:text="Suscribirme a gimnasio"
-                android:textSize="20sp" />
+                android:text="@string/app_name"
+                android:textSize="20sp"
+                tools:ignore="TextContrastCheck" />
             <!--android:fontFamily="@font/bunglee" -->
 
             <TextView
@@ -61,7 +65,8 @@
                 android:layout_marginStart="9dp"
                 android:layout_marginBottom="27dp"
                 android:layout_toEndOf="@id/image_profile"
-                android:text="Suscribirme un gimnasio en HMB-MODEL"
+                android:text="@string/suscribirme_un_gimnasio_en_hmb_model"
+                android:textColor="#B3E5FC"
                 android:textSize="14sp" />
 
         </RelativeLayout>
@@ -77,7 +82,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:hint="Nombre del Gimnasio">
+                android:hint="Nombre del Gimnasio"
+                tools:ignore="HardcodedText">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/fullname"
@@ -85,7 +91,8 @@
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/ic_account"
                     android:drawablePadding="10dp"
-                    android:text=" " />
+                    android:text=" "
+                    tools:ignore="VisualLintTextFieldSize" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -93,7 +100,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:hint="Nombre Completo">
+                android:hint="Nombre Completo"
+                tools:ignore="HardcodedText">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/propietario"
@@ -101,7 +109,8 @@
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/ic_account"
                     android:drawablePadding="10dp"
-                    android:text=" " />
+                    android:text=" "
+                    tools:ignore="HardcodedText,VisualLintTextFieldSize" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -109,7 +118,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:hint="Dirección">
+                android:hint="@string/direcci_n">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/email"
@@ -117,7 +126,8 @@
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/ic_email"
                     android:drawablePadding="10dp"
-                    android:text=" " />
+                    android:text=" "
+                    tools:ignore="HardcodedText,VisualLintTextFieldSize" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -125,13 +135,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:hint="Fecha de ingreso">
+                android:hint="Fecha de ingreso"
+                tools:ignore="HardcodedText">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/fechaingreso"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:drawableStart="@drawable/ic_email"
+                    android:drawableStart="@drawable/ic_list"
                     android:drawablePadding="10dp"
                     android:text=" " />
             </com.google.android.material.textfield.TextInputLayout>
@@ -141,13 +152,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:hint="Fecha de pago">
+                android:hint="Fecha de pago"
+                tools:ignore="HardcodedText">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/fechapago"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:drawableStart="@drawable/ic_email"
+                    android:drawableStart="@drawable/ic_list"
                     android:drawablePadding="10dp"
                     android:text=" " />
             </com.google.android.material.textfield.TextInputLayout>
@@ -156,11 +168,12 @@
                 android:id="@+id/buttonCreate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/Color_P"
-                android:text="Suscribirme"
-                android:textColor="#37474F"
+                android:background="@color/principal"
+                android:backgroundTint="@color/principal"
+                android:text="@string/suscribirme"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="TextContrastCheck,VisualLintButtonSize" />
 
 
         </LinearLayout>

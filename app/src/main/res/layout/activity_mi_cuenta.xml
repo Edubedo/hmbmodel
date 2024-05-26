@@ -1,23 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/principal"
     tools:context=".MiCuenta">
 
+    <!-- Encabezado -->
     <LinearLayout
-        android:layout_width="612dp"
-        android:layout_height="60dp"
-        android:background="@drawable/header_bg"
-        android:elevation="10dp"
-        android:gravity="center_vertical"
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
         android:orientation="horizontal"
-        android:padding="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints">
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:elevation="10dp"
+        android:background="@color/principal"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/textWelcomeMessage"
@@ -39,34 +40,51 @@
             tools:ignore="TouchTargetSizeCheck" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textViewEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="4dp"
-        android:text="Correo Electrónico"
+    <!-- Contenido -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="16dp"
+        android:elevation="5dp"
+        android:background="@color/principal"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout2"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewFullName" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints">
 
-    <TextView
-        android:id="@+id/textViewFullName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="160dp"
-        android:text="Nombre Completo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/textViewFullName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Nombre Completo"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            tools:ignore="HardcodedText" />
 
-    <TextView
-        android:id="@+id/textViewPhone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:text="Teléfono"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewEmail" />
+        <TextView
+            android:id="@+id/textViewEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/correo_electr_nico"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/textViewPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Teléfono"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
