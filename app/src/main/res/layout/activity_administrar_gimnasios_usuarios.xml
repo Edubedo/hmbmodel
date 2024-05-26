@@ -41,6 +41,31 @@
         android:layout_margin="5dp"
         android:background="@color/Color_P"
         android:gravity="center"
+        android:onClick="redirectToMisGimnasios"
+        android:orientation="vertical"
+        tools:ignore="UseCompoundDrawables,VisualLintBounds">
+
+        <ImageView
+            android:layout_width="320dp"
+            android:layout_height="44dp"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/ic_menu_gallery" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/mis_gimnasios"
+            android:textAlignment="center"
+            android:textColor="#424242" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/redirectToMisSuscripciones"
+        android:layout_width="411dp"
+        android:layout_height="94dp"
+        android:layout_margin="5dp"
+        android:background="@color/Color_P"
+        android:gravity="center"
         android:onClick="redirectoToVerSuscripciones"
         android:orientation="vertical"
         tools:ignore="UseCompoundDrawables,VisualLintBounds">

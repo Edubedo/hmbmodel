@@ -14,7 +14,7 @@ public class AdministrarGimnasiosUsuarios extends AppCompatActivity {
     }
 
     public void redirectoToVerSuscripciones(View view) {
-        Intent intent = new Intent(this, MisGimnasios.class);
+        Intent intent = new Intent(this, MisSuscripcionesGym.class);
         startActivity(intent);
     }
 
@@ -25,6 +25,11 @@ public class AdministrarGimnasiosUsuarios extends AppCompatActivity {
 
     public void redirectToCrearGimnasio(View view) {
         Intent intent = new Intent(this, FormularioCrearGimnasios.class);
+        startActivity(intent);
+    }
+
+    public void redirectToMisGimnasios(View view) {
+        Intent intent = new Intent(this, MisGimnasios.class);
         startActivity(intent);
     }
 }
