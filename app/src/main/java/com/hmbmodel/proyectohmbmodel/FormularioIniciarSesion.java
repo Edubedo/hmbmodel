@@ -75,7 +75,7 @@ public class FormularioIniciarSesion extends AppCompatActivity {
 
                                 // Guardar nombre de usuario y nombre completo en SharedPreferences
                                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                                editor.putString("username", username);
+                                editor.putString("email", username);
                                 editor.putString("fullname", fullname);
                                 editor.apply();
 

@@ -1,6 +1,7 @@
 package com.hmbmodel.proyectohmbmodel;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -9,7 +10,6 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -20,6 +20,7 @@ public class FormularioCrearGimnasios extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     private FirebaseFirestore db;
+    private SharedPreferences sharedPreferences;
 
     private EditText editTextFullname;
     private EditText editTextOwner;
@@ -35,6 +36,7 @@ public class FormularioCrearGimnasios extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
         db = FirebaseFirestore.getInstance();
+        sharedPreferences = getSharedPreferences("login", MODE_PRIVATE);
 
         editTextFullname = findViewById(R.id.fullname);
         editTextOwner = findViewById(R.id.propietario);
@@ -53,14 +55,13 @@ public class FormularioCrearGimnasios extends AppCompatActivity {
         String phone = editTextPhone.getText().toString().trim();
         String description = editTextDescription.getText().toString().trim();
 
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        if (currentUser == null) {
+        String ownerEmail = sharedPreferences.getString("email", null);
+        if (ownerEmail == null || ownerEmail.isEmpty()) {
             Toast.makeText(this, "Usuario no autenticado", Toast.LENGTH_SHORT).show();
             return;
         }
-        String ownerEmail = currentUser.getEmail();
 
-        if (fullname.isEmpty() || owner.isEmpty() || email.isEmpty() || phone.isEmpty() || description.isEmpty() || ownerEmail == null || ownerEmail.isEmpty()) {
+        if (fullname.isEmpty() || owner.isEmpty() || email.isEmpty() || phone.isEmpty() || description.isEmpty()) {
             Toast.makeText(this, "Por favor, complete todos los campos", Toast.LENGTH_SHORT).show();
             return;
         }
