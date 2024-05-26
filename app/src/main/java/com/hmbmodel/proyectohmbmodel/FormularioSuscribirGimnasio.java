@@ -101,6 +101,11 @@ public class FormularioSuscribirGimnasio extends AppCompatActivity {
                                                     editTextEmail.setText("");
                                                     editTextFechaIngreso.setText("");
                                                     editTextFechaPago.setText("");
+
+                                                    // Redirigir a la sección "Mis Suscripciones"
+                                                    Intent intent = new Intent(FormularioSuscribirGimnasio.this, MisSuscripcionesGym.class);
+                                                    startActivity(intent);
+                                                    finish();
                                                 })
                                                 .addOnFailureListener(e -> {
                                                     Toast.makeText(this, "Error al crear la suscripción: " + e.getMessage(), Toast.LENGTH_SHORT).show();
