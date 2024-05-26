@@ -48,7 +48,7 @@ public class MisGimnasios extends AppCompatActivity {
         recyclerViewGimnasios.setLayoutManager(new LinearLayoutManager(this));
 
         gimnasioList = new ArrayList<>();
-        adapter = new GimnasioAdapter(gimnasioList);
+        adapter = new GimnasioAdapter(this, gimnasioList);
         recyclerViewGimnasios.setAdapter(adapter);
 
         db.collection("gimnasios")
@@ -58,7 +58,15 @@ public class MisGimnasios extends AppCompatActivity {
                     if (task.isSuccessful()) {
                         for (QueryDocumentSnapshot document : task.getResult()) {
                             Gimnasio gimnasio = document.toObject(Gimnasio.class);
-                            gimnasioList.add(gimnasio);
+                            gimnasioList.add(new Gimnasio(
+                                    document.getId(),
+                                    gimnasio.getNombre(),
+                                    gimnasio.getPropietario(),
+                                    gimnasio.getEmail(),
+                                    gimnasio.getTelefono(),
+                                    gimnasio.getDescripcion(),
+                                    gimnasio.getPropietarioEmail()
+                            ));
                         }
                         adapter.notifyDataSetChanged();
                     } else {

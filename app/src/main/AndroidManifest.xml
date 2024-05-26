@@ -13,6 +13,12 @@
         android:theme="@style/Theme.Proyectohmbmodel"
         tools:targetApi="31">
         <activity
+            android:name=".ActivityDetalleGimnasio"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityDetallesGimnasio"
+            android:exported="false" />
+        <activity
             android:name=".DetalleSuscripcionActivity"
             android:exported="false" />
         <activity
