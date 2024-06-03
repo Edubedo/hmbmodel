@@ -4,7 +4,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -12,10 +11,10 @@ import java.util.List;
 
 public class UsuarioAdapter extends RecyclerView.Adapter<UsuarioAdapter.UsuarioViewHolder> {
 
-    private List<Usuario> usuarioList;
+    private List<Usuario> usuarios;
 
-    public UsuarioAdapter(List<Usuario> usuarioList) {
-        this.usuarioList = usuarioList;
+    public UsuarioAdapter(List<Usuario> usuarios) {
+        this.usuarios = usuarios;
     }
 
     @NonNull
@@ -27,21 +26,21 @@ public class UsuarioAdapter extends RecyclerView.Adapter<UsuarioAdapter.UsuarioV
 
     @Override
     public void onBindViewHolder(@NonNull UsuarioViewHolder holder, int position) {
-        Usuario usuario = usuarioList.get(position);
+        Usuario usuario = usuarios.get(position);
         holder.textViewFullname.setText(usuario.getFullname());
         holder.textViewPhone.setText(usuario.getPhone());
     }
 
     @Override
     public int getItemCount() {
-        return usuarioList.size();
+        return usuarios.size();
     }
 
-    static class UsuarioViewHolder extends RecyclerView.ViewHolder {
+    class UsuarioViewHolder extends RecyclerView.ViewHolder {
         TextView textViewFullname;
         TextView textViewPhone;
 
-        public UsuarioViewHolder(@NonNull View itemView) {
+        UsuarioViewHolder(@NonNull View itemView) {
             super(itemView);
             textViewFullname = itemView.findViewById(R.id.textViewFullname);
             textViewPhone = itemView.findViewById(R.id.textViewPhone);

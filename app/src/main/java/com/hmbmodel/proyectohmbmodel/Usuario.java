@@ -5,10 +5,6 @@ public class Usuario {
     private String phone;
     private String email;
 
-    public Usuario() {
-        // Constructor vacío requerido para Firestore
-    }
-
     public Usuario(String fullname, String phone, String email) {
         this.fullname = fullname;
         this.phone = phone;
