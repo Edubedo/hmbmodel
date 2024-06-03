@@ -14,6 +14,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+
         tools:ignore="HardcodedText" />
 
     <LinearLayout
@@ -53,7 +54,6 @@
                 android:layout_centerVertical="true"
                 android:layout_marginStart="10dp"
                 android:layout_toEndOf="@id/image_profile"
-
                 android:includeFontPadding="false"
                 android:text="@string/suscribirme_a_un_gimnasio"
                 android:textColor="#fff"
@@ -84,7 +84,9 @@
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/ic_account"
                     android:drawablePadding="10dp"
-                    android:text=" "
+                    android:text=""
+                    android:background="@color/white"
+
                     tools:ignore="VisualLintTextFieldSize" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -102,7 +104,9 @@
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/ic_account"
                     android:drawablePadding="10dp"
-                    android:text=" "
+                    android:background="@color/white"
+
+                    android:text=""
                     tools:ignore="HardcodedText,VisualLintTextFieldSize" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -119,7 +123,9 @@
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/ic_email"
                     android:drawablePadding="10dp"
-                    android:text=" "
+                    android:background="@color/white"
+
+                    android:text=""
                     tools:ignore="HardcodedText,VisualLintTextFieldSize" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -137,7 +143,8 @@
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/ic_list"
                     android:drawablePadding="10dp"
-                    android:text=" " />
+                    android:background="@color/white"
+                    android:text="" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -154,7 +161,8 @@
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/ic_list"
                     android:drawablePadding="10dp"
-                    android:text=" " />
+                    android:background="@color/white"
+                    android:text="" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button

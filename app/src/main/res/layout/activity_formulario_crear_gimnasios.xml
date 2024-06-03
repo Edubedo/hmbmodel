@@ -79,7 +79,8 @@
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/ic_account"
                     android:drawablePadding="10dp"
-                    android:text=" "
+                    android:text=""                    android:background="@color/white"
+
                     tools:ignore="HardcodedText" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -95,8 +96,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/ic_account"
-                    android:drawablePadding="10dp"
-                    android:text=" " />
+                    android:drawablePadding="10dp"                    android:background="@color/white"
+
+                    android:text="" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -112,8 +114,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/ic_email"
-                    android:drawablePadding="10dp"
-                    android:text=" " />
+                    android:drawablePadding="10dp"                    android:background="@color/white"
+
+                    android:text="" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -128,8 +131,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/ic_phone"
-                    android:drawablePadding="10dp"
-                    android:text=" " />
+                    android:drawablePadding="10dp"                    android:background="@color/white"
+
+                    android:text="" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -145,9 +149,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/ic_list"
+                    android:background="@color/white"
 
                     android:drawablePadding="10dp"
-                    android:text=" " />
+                    android:text="" />
             </com.google.android.material.textfield.TextInputLayout>
 
 

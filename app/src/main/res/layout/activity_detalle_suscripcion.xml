@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".DetalleSuscripcionActivity">
 
     <!-- Encabezado -->
@@ -47,8 +48,14 @@
         android:id="@+id/linearLayout4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/background"
         android:orientation="vertical"
         android:padding="16dp"
+        android:textColor="@color/white"
+
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
         tools:ignore="MissingConstraints">
 
@@ -58,7 +65,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:text="Nombre del Gimnasio"
-            android:textColor="@color/principal"
+            android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -68,16 +75,17 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:text="Fecha de Ingreso"
-            android:textColor="@color/principal"
+            android:textColor="@color/white"
+
             android:textSize="18sp" />
 
         <TextView
             android:id="@+id/textFechaPagoDetalle"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="36dp"
             android:layout_marginBottom="16dp"
             android:text="Fecha de Pago"
-            android:textColor="@color/principal"
+            android:textColor="@color/white"
             android:textSize="18sp" />
 
         <TextView
@@ -86,7 +94,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:text="Nombre del Propietario"
-            android:textColor="@color/principal"
+            android:textColor="@color/white"
             android:textSize="18sp" />
     </LinearLayout>
 

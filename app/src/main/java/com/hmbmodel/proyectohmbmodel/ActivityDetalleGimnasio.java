@@ -29,7 +29,6 @@ public class ActivityDetalleGimnasio extends AppCompatActivity {
         textViewEmail = findViewById(R.id.textViewEmail);
         textViewTelefono = findViewById(R.id.textViewTelefono);
         textViewDescripcion = findViewById(R.id.textViewDescripcion);
-        recyclerViewUsuarios = findViewById(R.id.recyclerViewUsuarios);
 
         // Obtener la instancia de SharedPreferences
         sharedPreferences = getSharedPreferences("login", MODE_PRIVATE);
@@ -51,21 +50,6 @@ public class ActivityDetalleGimnasio extends AppCompatActivity {
             textViewDescripcion.setText(descripcion);
         }
 
-        // Configurar el RecyclerView
-        recyclerViewUsuarios.setLayoutManager(new LinearLayoutManager(this));
-        usuariosAdapter = new UsuarioAdapter(obtenerListaUsuarios());
-        recyclerViewUsuarios.setAdapter(usuariosAdapter);
-    }
-
-    private List<Usuario> obtenerListaUsuarios() {
-        // Aquí debes obtener la lista de usuarios de tu base de datos
-        // A continuación, se muestra una lista de ejemplo
-
-        List<Usuario> usuarios = new ArrayList<>();
-        usuarios.add(new Usuario("Eduardo Yair Hernández Escobedo", "31121234", "edu@gmail.com"));
-        // Agrega más usuarios según sea necesario
-
-        return usuarios;
     }
 
     public void logout(View view) {

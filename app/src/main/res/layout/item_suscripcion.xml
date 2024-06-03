@@ -10,7 +10,7 @@
 
     <LinearLayout
         android:layout_width="385dp"
-        android:layout_height="149dp"
+        android:layout_height="match_parent"
         android:background="@color/secundario"
         android:orientation="vertical"
         android:padding="16dp"
@@ -49,9 +49,10 @@
             android:id="@+id/buttonDelete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/boton_salir"
             android:layout_marginTop="8dp"
+            android:background="@drawable/boton_salir"
             android:text="@string/borrar"
+            android:textColor="@color/principal"
             tools:ignore="HardcodedText,TouchTargetSizeCheck" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>
