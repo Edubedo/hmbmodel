@@ -16,6 +16,10 @@ public class UsuarioAdapter extends RecyclerView.Adapter<UsuarioAdapter.UsuarioV
     public UsuarioAdapter(List<Usuario> usuarios) {
         this.usuarios = usuarios;
     }
+    public void actualizarListaUsuarios(List<Usuario> nuevosUsuarios) {
+        this.usuarios = nuevosUsuarios;
+        notifyDataSetChanged();
+    }
 
     @NonNull
     @Override
