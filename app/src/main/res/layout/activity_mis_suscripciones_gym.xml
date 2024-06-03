@@ -79,8 +79,8 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewSuscripciones"
-        android:layout_width="481dp"
-        android:layout_height="680dp"
+        android:layout_width="477dp"
+        android:layout_height="662dp"
         android:layout_marginTop="16dp"
         android:background="@color/background"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -31,23 +31,13 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="140dp"
+            android:layout_height="139dp"
             android:background="@color/principal"
             android:elevation="10dp"
             android:padding="20dp"
-            tools:ignore="ExtraText">>
+            tools:ignore="ExtraText"><![CDATA[>
 
-            <TextView
-                android:id="@+id/textview_descrip"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="10dp"
-                android:layout_toEndOf="@id/image_profile"
-                android:text="Crear usuario"
-                android:textColor="#B3E5FC"
-
-                android:textSize="14sp" />
+            ]]>
 
             <ImageView
                 android:id="@+id/image_profile"
@@ -58,17 +48,17 @@
 
             <TextView
                 android:id="@+id/textview_fullname"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_width="277dp"
+                android:layout_height="119dp"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="12dp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginStart="9dp"
+                android:layout_marginBottom="0dp"
                 android:layout_toEndOf="@id/image_profile"
                 android:includeFontPadding="false"
-                android:text="@string/app_name"
-                android:textColor="#000"
+                android:text="Crear usuario"
+                android:textColor="#fff"
 
-                android:textSize="20sp" />
+                android:textSize="24sp" />
             <!--android:fontFamily="@font/bunglee" -->
             android:id="@+id/textview_descrip"
             android:layout_width="wrap_content"

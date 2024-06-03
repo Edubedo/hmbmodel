@@ -80,4 +80,13 @@
     <string name="nombre_del_gimnasiowdw">Nombre del Gimnasio</string>
     <string name="crear_un_gimnasiowdwd">Crear un gimnasio</string>
     <string name="administrador_de_gimnasios">Administrador de gimnasios</string>
+    <string name="editar_perfil">EDITAR PERFIL</string>
+    <string name="informaci_n_de_usuario">Información de usuario</string>
+    <string name="nombre">Nombre:</string>
+    <string name="tel_fono">Teléfono:</string>
+    <string name="correo">correo</string>
+    <string name="tel_fonoQSDQDQ">teléfono</string>
+    <string name="name">name</string>
+    <string name="mi_cuentaWDWDW">Mi cuenta</string>
+    <string name="correoWDWDW">Correo:</string>
 </resources>

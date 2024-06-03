@@ -101,7 +101,6 @@
                 android:textSize="16sp" />
         </LinearLayout>
 
-        <!-- Opción 3: Mis suscripciones -->
 
     </LinearLayout>
 </LinearLayout>

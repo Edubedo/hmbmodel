@@ -31,9 +31,9 @@ public class MiCuenta extends AppCompatActivity {
         EdgeToEdge.enable(this);
 
         // Enlazar vistas
-        textViewFullName = findViewById(R.id.textViewFullName);
-        textViewEmail = findViewById(R.id.textViewEmail);
-        textViewPhone = findViewById(R.id.textViewPhone);
+        textViewFullName = findViewById(R.id.editTextName);
+        textViewEmail = findViewById(R.id.editTextEmail);
+        textViewPhone = findViewById(R.id.editTextPhone);
 
         // Aplicar el padding para la barra de sistema
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {

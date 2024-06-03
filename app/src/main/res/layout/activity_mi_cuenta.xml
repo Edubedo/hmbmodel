@@ -25,7 +25,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Mi cuenta"
+            android:text="@string/mi_cuentaWDWDW"
             android:textColor="#ffffff"
             android:textSize="18sp" />
 
@@ -42,52 +42,136 @@
     </LinearLayout>
 
     <!-- Contenido -->
-    <LinearLayout
+    <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/background"
-        android:elevation="5dp"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:padding="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearLayout2"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintTop_toBottomOf="@id/linearLayout2">
 
-        <TextView
-            android:id="@+id/textViewFullName"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:text="Nombre Completo"
-            android:textColor="#ffffff"
-            android:textSize="18sp"
-            tools:ignore="HardcodedText" />
+            android:orientation="vertical"
+            android:padding="16dp">
 
-        <TextView
-            android:id="@+id/textViewEmail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/correo_electr_nico"
-            android:textColor="#ffffff"
-            android:textSize="16sp"
-            tools:ignore="HardcodedText" />
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_account"
+                android:contentDescription="@string/suscribirme_a_un_gimnasio"
+                android:layout_marginBottom="16dp"
+                android:padding="8dp" />
 
-        <TextView
-            android:id="@+id/textViewPhone"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Teléfono"
-            android:textColor="#ffffff"
-            android:textSize="16sp"
-            tools:ignore="HardcodedText" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
 
-    </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/informaci_n_de_usuario"
+                        android:textColor="@color/principal"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="16dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/nombre"
+                            android:textSize="16sp"
+                            android:textColor="@color/principal" />
+
+                        <EditText
+                            android:id="@+id/editTextName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:autofillHints=""
+                            android:hint="@string/name"
+                            android:inputType="textPersonName"
+                            android:padding="8dp"
+                            android:textColor="@color/principal"
+                            tools:ignore="TouchTargetSizeCheck,VisualLintTextFieldSize" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/correoWDWDW"
+                            android:textSize="16sp"
+                            android:textColor="@color/principal" />
+
+                        <EditText
+                            android:id="@+id/editTextEmail"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="@string/correo"
+                            android:inputType="textEmailAddress"
+                            android:padding="8dp"
+                            android:textColor="@color/principal"
+                            tools:ignore="TouchTargetSizeCheck,VisualLintTextFieldSize"
+                            android:autofillHints="" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tel_fono"
+                            android:textSize="16sp"
+                            android:textColor="@color/principal" />
+
+                        <EditText
+                            android:id="@+id/editTextPhone"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="@string/tel_fonoQSDQDQ"
+                            android:inputType="phone"
+                            android:padding="8dp"
+                            android:textColor="@color/principal"
+                            tools:ignore="TouchTargetSizeCheck,VisualLintTextFieldSize"
+                            android:autofillHints="" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
