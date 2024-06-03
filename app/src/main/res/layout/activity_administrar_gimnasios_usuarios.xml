@@ -1,36 +1,37 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/eablogo"
+    android:background="@color/background"
     tools:context=".AdministrarGimnasiosUsuarios"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:elevation="10dp"
         android:gravity="center_vertical"
-        android:padding="16dp"
         android:background="@color/principal"
-        android:elevation="10dp">
+        android:orientation="horizontal"
+        android:padding="16dp">
 
         <TextView
             android:id="@+id/textWelcomeMessage"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textColor="#ffffff"
             android:text="@string/administrador_de_gimnasios"
+            android:textColor="#ffffff"
             android:textSize="18sp" />
 
         <ImageButton
             android:id="@+id/btnLogout"
-            android:onClick="logout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="?android:attr/selectableItemBackgroundBorderless"
             android:contentDescription="@string/cerrar_sesi_n"
+            android:onClick="logout"
             android:src="@drawable/ic_exit"
             tools:ignore="TouchTargetSizeCheck" />
     </LinearLayout>
@@ -40,7 +41,7 @@
         android:layout_width="395dp"
         android:layout_height="110dp"
         android:layout_margin="8dp"
-        android:background="@color/secundario"
+        android:background="@drawable/boton_salir"
         android:gravity="center"
         android:onClick="redirectToMisGimnasios"
         android:orientation="vertical">
@@ -57,13 +58,14 @@
             android:text="@string/mis_gimnasios"
             android:textAlignment="center"
             android:textColor="@android:color/white"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            tools:ignore="TextContrastCheck" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/redirectToMisSuscripciones"
         android:layout_width="match_parent"
-        android:background="@color/secundario"
+        android:background="@drawable/boton_salir"
 
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
@@ -83,7 +85,8 @@
             android:text="@string/mis_suscripciones"
             android:textAlignment="center"
             android:textColor="@android:color/white"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            tools:ignore="TextContrastCheck,TextContrastCheck" />
     </LinearLayout>
 
     <LinearLayout
@@ -92,7 +95,7 @@
         android:layout_height="120dp"
         android:layout_margin="8dp"
 
-        android:background="@color/secundario"
+        android:background="@drawable/boton_salir"
         android:gravity="center"
         android:onClick="redirectToSuscribirme"
         android:orientation="vertical">
@@ -109,7 +112,8 @@
             android:text="@string/suscribirme_a_un_gimnasio"
             android:textAlignment="center"
             android:textColor="@android:color/white"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            tools:ignore="TextContrastCheck" />
     </LinearLayout>
 
     <LinearLayout
@@ -117,7 +121,7 @@
         android:layout_width="match_parent"
         android:layout_height="102dp"
         android:layout_margin="8dp"
-        android:background="@color/secundario"
+        android:background="@drawable/boton_salir"
         android:gravity="center"
         android:onClick="redirectToCrearGimnasio"
         android:orientation="vertical">
@@ -132,9 +136,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/crear_gimnasio"
-            android:textAlignment="center"                android:textColor="@android:color/white"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
 
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            tools:ignore="TextContrastCheck" />
     </LinearLayout>
 
 </LinearLayout>

@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
+    android:background="@color/background"
+
     android:layout_height="match_parent"
     tools:context=".MisSuscripcionesGym">
     <LinearLayout
@@ -12,7 +14,7 @@
         android:orientation="horizontal"
         android:gravity="center_vertical"
         android:padding="16dp"
-        android:background="@drawable/header_bg"
+        android:background="@color/background"
         android:elevation="10dp"
         tools:ignore="MissingConstraints">
 
@@ -54,12 +56,14 @@
 
         <ImageButton
             android:id="@+id/btnLogout"
-            android:onClick="logout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="centerInside"
             android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:backgroundTint="@color/white"
             android:contentDescription="@string/cerrar_sesi_nwdw"
-            android:src="@drawable/ic_exit"
+            android:onClick="logout"
+            android:src="@drawable/cerrar"
             tools:ignore="TouchTargetSizeCheck" />
     </LinearLayout>
 
@@ -75,9 +79,10 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewSuscripciones"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="481dp"
+        android:layout_height="680dp"
         android:layout_marginTop="16dp"
+        android:background="@color/background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

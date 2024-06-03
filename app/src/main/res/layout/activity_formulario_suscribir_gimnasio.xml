@@ -20,11 +20,14 @@
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="@color/background"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -39,20 +42,21 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_centerVertical="true"
+                android:importantForAccessibility="no"
                 android:src="@drawable/userss"
-                tools:ignore="ImageContrastCheck"
-                android:importantForAccessibility="no" />
+                tools:ignore="ImageContrastCheck" />
 
             <TextView
                 android:id="@+id/textview_fullname"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_centerVertical="true"
-                android:layout_marginStart="10dp"                android:textColor="#000"
-
+                android:layout_marginStart="10dp"
                 android:layout_toEndOf="@id/image_profile"
+
                 android:includeFontPadding="false"
                 android:text="@string/app_name"
+                android:textColor="#000"
                 android:textSize="20sp"
                 tools:ignore="TextContrastCheck" />
             <!--android:fontFamily="@font/bunglee" -->
@@ -74,6 +78,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="541dp"
+            android:background="@color/background"
             android:orientation="vertical"
             android:padding="16dp">
 
@@ -168,7 +173,7 @@
                 android:id="@+id/buttonCreate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/principal"
+                android:background="@drawable/boton_salir"
                 android:backgroundTint="@color/principal"
                 android:text="@string/suscribirme"
                 app:layout_constraintEnd_toEndOf="parent"

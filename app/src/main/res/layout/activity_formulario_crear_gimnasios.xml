@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context=".FormularioCrearGimnasios">
 
     <TextView
@@ -19,6 +20,7 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
+        android:background="@color/background"
         android:layout_height="0dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -73,12 +75,14 @@
             android:layout_width="match_parent"
             android:layout_height="541dp"
             android:orientation="vertical"
+            android:background="@color/background"
             android:padding="16dp">
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/edit_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/boton_salir"
                 android:layout_marginBottom="10dp"
                 android:hint="@string/nombre_del_gimnasiowdw">
 
@@ -113,7 +117,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:hint="Dirección">
+                android:hint="Dirección"
+                tools:ignore="HardcodedText">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/email"
@@ -146,7 +151,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:hint="Descripción"
-                >
+                tools:ignore="HardcodedText">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/password"
@@ -163,11 +168,11 @@
                 android:id="@+id/buttonCreate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/Color_P"
+                android:background="@drawable/boton_salir"
                 android:text="Crear"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="TextContrastCheck" />
+                tools:ignore="HardcodedText,TextContrastCheck" />
 
 
         </LinearLayout>

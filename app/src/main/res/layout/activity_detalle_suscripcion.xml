@@ -35,10 +35,11 @@
             android:src="@drawable/ic_exit"
             tools:ignore="TouchTargetSizeCheck" />
     </LinearLayout>
+
     <LinearLayout
-        android:layout_width="414dp"
-        android:layout_height="735dp"
-        android:background="@color/principal"
+        android:layout_width="415dp"
+        android:layout_height="679dp"
+        android:background="@color/background"
         android:elevation="5dp"
         android:gravity="center"
         android:onClick="redirectToAdministrarGimnasios"
@@ -47,19 +48,19 @@
         android:padding="16dp"
         android:textColor="#ffffff"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
-
+        tools:layout_editor_absoluteX="-1dp"
+        tools:layout_editor_absoluteY="56dp">
 
 
         <TextView
             android:id="@+id/textNombreGimnasioDetalle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
             android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
             android:text="Nombre del Gimnasio"
-            android:textSize="20sp"            android:textColor="#ffffff"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
 
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -69,9 +70,10 @@
             android:id="@+id/textFechaIngresoDetalle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
             android:layout_marginStart="16dp"
-            android:text="Fecha de Ingreso"            android:textColor="#ffffff"
+            android:layout_marginTop="16dp"
+            android:text="Fecha de Ingreso"
+            android:textColor="#ffffff"
 
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -81,9 +83,10 @@
             android:id="@+id/textFechaPagoDetalle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
             android:layout_marginStart="16dp"
-            android:text="Fecha de Pago"            android:textColor="#ffffff"
+            android:layout_marginTop="16dp"
+            android:text="Fecha de Pago"
+            android:textColor="#ffffff"
 
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -93,10 +96,11 @@
             android:id="@+id/textNombrePropietarioDetalle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"            android:textColor="#ffffff"
-
             android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+
             android:text="Nombre del Propietario"
+            android:textColor="#ffffff"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/textFechaPagoDetalle" />

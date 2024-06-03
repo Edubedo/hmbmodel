@@ -20,11 +20,14 @@
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="@color/secundario"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -41,7 +44,8 @@
                 android:layout_centerVertical="true"
                 android:layout_marginStart="10dp"
                 android:layout_toEndOf="@id/image_profile"
-                android:text="Crear usuario"                android:textColor="#B3E5FC"
+                android:text="Crear usuario"
+                android:textColor="#B3E5FC"
 
                 android:textSize="14sp" />
 
@@ -66,20 +70,21 @@
 
                 android:textSize="20sp" />
             <!--android:fontFamily="@font/bunglee" -->
-                android:id="@+id/textview_descrip"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="10dp"
-                android:layout_toEndOf="@id/image_profile"
-                android:text="Crear una cuenta"
-                android:textSize="14sp" />
+            android:id="@+id/textview_descrip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/image_profile"
+            android:text="Crear una cuenta"
+            android:textSize="14sp" />
 
         </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="541dp"
+            android:layout_height="591dp"
+            android:background="@color/background"
             android:orientation="vertical"
             android:padding="16dp">
 
@@ -154,11 +159,11 @@
                 android:id="@+id/buttonCreate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/Color_P"
+                android:background="@drawable/boton_salir"
                 android:text="Crear"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="TextContrastCheck" />
+                tools:ignore="HardcodedText,TextContrastCheck" />
 
 
         </LinearLayout>
